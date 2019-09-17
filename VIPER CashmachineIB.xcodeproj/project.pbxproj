@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		821FA13F2292A4F200D429ED /* ViewControllerIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FA13E2292A4F200D429ED /* ViewControllerIB.swift */; };
+		821FA14B2292A66000D429ED /* GoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821FA1482292A66000D429ED /* GoodsTableViewCell.xib */; };
+		821FA14C2292A66000D429ED /* Goods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FA1492292A66000D429ED /* Goods.swift */; };
+		821FA14D2292A66000D429ED /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FA14A2292A66000D429ED /* GoodsTableViewCell.swift */; };
+		821FA1502292ADC100D429ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821FA14E2292ADC100D429ED /* Main.storyboard */; };
+		821FA1532292C60100D429ED /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821FA1522292C60100D429ED /* Assembly.swift */; };
+		82D5E6912269F74700DD9AE6 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6722269F74700DD9AE6 /* Presenter.swift */; };
+		82D5E6932269F74700DD9AE6 /* ViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6752269F74700DD9AE6 /* ViewOutput.swift */; };
+		82D5E6942269F74700DD9AE6 /* ViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6762269F74700DD9AE6 /* ViewInput.swift */; };
+		82D5E6952269F74700DD9AE6 /* InteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6782269F74700DD9AE6 /* InteractorOutput.swift */; };
+		82D5E6962269F74700DD9AE6 /* CashMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E67B2269F74700DD9AE6 /* CashMachine.swift */; };
+		82D5E6972269F74700DD9AE6 /* IMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E67D2269F74700DD9AE6 /* IMapper.swift */; };
+		82D5E6982269F74700DD9AE6 /* TaxCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E67E2269F74700DD9AE6 /* TaxCalculator.swift */; };
+		82D5E6992269F74700DD9AE6 /* MakeBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E67F2269F74700DD9AE6 /* MakeBill.swift */; };
+		82D5E69A2269F74700DD9AE6 /* BIllPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6802269F74700DD9AE6 /* BIllPrinter.swift */; };
+		82D5E69B2269F74700DD9AE6 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6812269F74700DD9AE6 /* Scanner.swift */; };
+		82D5E69C2269F74700DD9AE6 /* ScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6822269F74700DD9AE6 /* ScannerDelegate.swift */; };
+		82D5E69D2269F74700DD9AE6 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6842269F74700DD9AE6 /* Calculator.swift */; };
+		82D5E69F2269F74700DD9AE6 /* CashMachineAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6862269F74700DD9AE6 /* CashMachineAssambly.swift */; };
+		82D5E6A02269F74700DD9AE6 /* ScannerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6872269F74700DD9AE6 /* ScannerUnit.swift */; };
+		82D5E6A12269F74700DD9AE6 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6882269F74700DD9AE6 /* Printer.swift */; };
+		82D5E6A22269F74700DD9AE6 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6892269F74700DD9AE6 /* Mapper.swift */; };
+		82D5E6A32269F74700DD9AE6 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68A2269F74700DD9AE6 /* Interactor.swift */; };
+		82D5E6A42269F74700DD9AE6 /* InteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68B2269F74700DD9AE6 /* InteractorInput.swift */; };
+		82D5E6A52269F74700DD9AE6 /* IRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68D2269F74700DD9AE6 /* IRouterInput.swift */; };
+		82D5E6A62269F74700DD9AE6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68E2269F74700DD9AE6 /* Router.swift */; };
+		82DEEF2322786FCC00423F17 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DEEF2222786FCC00423F17 /* Errors.swift */; };
+		82E6E4902293E81F00472469 /* ControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6E48F2293E81F00472469 /* ControllerForTableView.swift */; };
+		82EEDA0522465C7700C72B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EEDA0422465C7700C72B16 /* AppDelegate.swift */; };
+		82EEDA0C22465C7B00C72B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EEDA0B22465C7B00C72B16 /* Assets.xcassets */; };
+		82EEDA0F22465C7B00C72B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EEDA0D22465C7B00C72B16 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		821FA13E2292A4F200D429ED /* ViewControllerIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerIB.swift; path = CashMachine/ViewControllerIB.swift; sourceTree = SOURCE_ROOT; };
+		821FA1482292A66000D429ED /* GoodsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsTableViewCell.xib; sourceTree = "<group>"; };
+		821FA1492292A66000D429ED /* Goods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goods.swift; sourceTree = "<group>"; };
+		821FA14A2292A66000D429ED /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
+		821FA14F2292ADC100D429ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		821FA1522292C60100D429ED /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		82D5E6722269F74700DD9AE6 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		82D5E6752269F74700DD9AE6 /* ViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOutput.swift; sourceTree = "<group>"; };
+		82D5E6762269F74700DD9AE6 /* ViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInput.swift; sourceTree = "<group>"; };
+		82D5E6782269F74700DD9AE6 /* InteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorOutput.swift; sourceTree = "<group>"; };
+		82D5E67B2269F74700DD9AE6 /* CashMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashMachine.swift; sourceTree = "<group>"; };
+		82D5E67D2269F74700DD9AE6 /* IMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMapper.swift; sourceTree = "<group>"; };
+		82D5E67E2269F74700DD9AE6 /* TaxCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxCalculator.swift; sourceTree = "<group>"; };
+		82D5E67F2269F74700DD9AE6 /* MakeBill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeBill.swift; sourceTree = "<group>"; };
+		82D5E6802269F74700DD9AE6 /* BIllPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIllPrinter.swift; sourceTree = "<group>"; };
+		82D5E6812269F74700DD9AE6 /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		82D5E6822269F74700DD9AE6 /* ScannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerDelegate.swift; sourceTree = "<group>"; };
+		82D5E6842269F74700DD9AE6 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		82D5E6862269F74700DD9AE6 /* CashMachineAssambly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashMachineAssambly.swift; sourceTree = "<group>"; };
+		82D5E6872269F74700DD9AE6 /* ScannerUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerUnit.swift; sourceTree = "<group>"; };
+		82D5E6882269F74700DD9AE6 /* Printer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		82D5E6892269F74700DD9AE6 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		82D5E68A2269F74700DD9AE6 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		82D5E68B2269F74700DD9AE6 /* InteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInput.swift; sourceTree = "<group>"; };
+		82D5E68D2269F74700DD9AE6 /* IRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouterInput.swift; sourceTree = "<group>"; };
+		82D5E68E2269F74700DD9AE6 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		82DEEF2222786FCC00423F17 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		82E6E48F2293E81F00472469 /* ControllerForTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerForTableView.swift; sourceTree = "<group>"; };
+		82EEDA0122465C7700C72B16 /* VIPER CashmachineIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER CashmachineIB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82EEDA0422465C7700C72B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		82EEDA0B22465C7B00C72B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82EEDA0E22465C7B00C72B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82EEDA1022465C7B00C72B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82EED9FE22465C7700C72B16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		821FA1472292A66000D429ED /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				821FA1482292A66000D429ED /* GoodsTableViewCell.xib */,
+				821FA1492292A66000D429ED /* Goods.swift */,
+				821FA14A2292A66000D429ED /* GoodsTableViewCell.swift */,
+			);
+			name = Cell;
+			path = CashMachine/Cell;
+			sourceTree = SOURCE_ROOT;
+		};
+		821FA1512292C5D300D429ED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				821FA1522292C60100D429ED /* Assembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		82D5E66D2269F74700DD9AE6 /* CashMachine */ = {
+			isa = PBXGroup;
+			children = (
+				82EEDA0422465C7700C72B16 /* AppDelegate.swift */,
+				82EEDA0B22465C7B00C72B16 /* Assets.xcassets */,
+				82EEDA0D22465C7B00C72B16 /* LaunchScreen.storyboard */,
+				82EEDA1022465C7B00C72B16 /* Info.plist */,
+				821FA14E2292ADC100D429ED /* Main.storyboard */,
+				82D5E66E2269F74700DD9AE6 /* Viper */,
+			);
+			path = CashMachine;
+			sourceTree = "<group>";
+		};
+		82D5E66E2269F74700DD9AE6 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E6732269F74700DD9AE6 /* View */,
+				82D5E6712269F74700DD9AE6 /* Presenter */,
+				82D5E6772269F74700DD9AE6 /* Interactor */,
+				82D5E68C2269F74700DD9AE6 /* Router */,
+				821FA1512292C5D300D429ED /* Assembly */,
+			);
+			path = Viper;
+			sourceTree = "<group>";
+		};
+		82D5E6712269F74700DD9AE6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E6722269F74700DD9AE6 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		82D5E6732269F74700DD9AE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821FA13E2292A4F200D429ED /* ViewControllerIB.swift */,
+				82E6E48F2293E81F00472469 /* ControllerForTableView.swift */,
+				821FA1472292A66000D429ED /* Cell */,
+				82D5E6762269F74700DD9AE6 /* ViewInput.swift */,
+				82D5E6752269F74700DD9AE6 /* ViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82D5E6772269F74700DD9AE6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E68A2269F74700DD9AE6 /* Interactor.swift */,
+				82D5E68B2269F74700DD9AE6 /* InteractorInput.swift */,
+				82D5E6782269F74700DD9AE6 /* InteractorOutput.swift */,
+				82D5E6792269F74700DD9AE6 /* Entity */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		82D5E6792269F74700DD9AE6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E67A2269F74700DD9AE6 /* CashMachine */,
+				82D5E6832269F74700DD9AE6 /* Implementation */,
+				82DEEF2122786F9500423F17 /* CashMachineErrors */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		82D5E67A2269F74700DD9AE6 /* CashMachine */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E67B2269F74700DD9AE6 /* CashMachine.swift */,
+				82D5E67C2269F74700DD9AE6 /* Interfaces */,
+			);
+			path = CashMachine;
+			sourceTree = "<group>";
+		};
+		82D5E67C2269F74700DD9AE6 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E67D2269F74700DD9AE6 /* IMapper.swift */,
+				82D5E67E2269F74700DD9AE6 /* TaxCalculator.swift */,
+				82D5E67F2269F74700DD9AE6 /* MakeBill.swift */,
+				82D5E6802269F74700DD9AE6 /* BIllPrinter.swift */,
+				82D5E6812269F74700DD9AE6 /* Scanner.swift */,
+				82D5E6822269F74700DD9AE6 /* ScannerDelegate.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		82D5E6832269F74700DD9AE6 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E6842269F74700DD9AE6 /* Calculator.swift */,
+				82D5E6862269F74700DD9AE6 /* CashMachineAssambly.swift */,
+				82D5E6872269F74700DD9AE6 /* ScannerUnit.swift */,
+				82D5E6882269F74700DD9AE6 /* Printer.swift */,
+				82D5E6892269F74700DD9AE6 /* Mapper.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		82D5E68C2269F74700DD9AE6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				82D5E68D2269F74700DD9AE6 /* IRouterInput.swift */,
+				82D5E68E2269F74700DD9AE6 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		82DEEF2122786F9500423F17 /* CashMachineErrors */ = {
+			isa = PBXGroup;
+			children = (
+				82DEEF2222786FCC00423F17 /* Errors.swift */,
+			);
+			path = CashMachineErrors;
+			sourceTree = "<group>";
+		};
+		82EED9F822465C7700C72B16 = {
+			isa = PBXGroup;
+			children = (
+				82D5E66D2269F74700DD9AE6 /* CashMachine */,
+				82EEDA0222465C7700C72B16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82EEDA0222465C7700C72B16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82EEDA0122465C7700C72B16 /* VIPER CashmachineIB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82EEDA0022465C7700C72B16 /* VIPER CashmachineIB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82EEDA1322465C7B00C72B16 /* Build configuration list for PBXNativeTarget "VIPER CashmachineIB" */;
+			buildPhases = (
+				82EED9FD22465C7700C72B16 /* Sources */,
+				82EED9FE22465C7700C72B16 /* Frameworks */,
+				82EED9FF22465C7700C72B16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VIPER CashmachineIB";
+			productName = "lesson9(CashMachine)";
+			productReference = 82EEDA0122465C7700C72B16 /* VIPER CashmachineIB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82EED9F922465C7700C72B16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Serg;
+				TargetAttributes = {
+					82EEDA0022465C7700C72B16 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 82EED9FC22465C7700C72B16 /* Build configuration list for PBXProject "VIPER CashmachineIB" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82EED9F822465C7700C72B16;
+			productRefGroup = 82EEDA0222465C7700C72B16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82EEDA0022465C7700C72B16 /* VIPER CashmachineIB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82EED9FF22465C7700C72B16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EEDA0F22465C7B00C72B16 /* LaunchScreen.storyboard in Resources */,
+				821FA14B2292A66000D429ED /* GoodsTableViewCell.xib in Resources */,
+				82EEDA0C22465C7B00C72B16 /* Assets.xcassets in Resources */,
+				821FA1502292ADC100D429ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82EED9FD22465C7700C72B16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D5E6962269F74700DD9AE6 /* CashMachine.swift in Sources */,
+				82D5E6992269F74700DD9AE6 /* MakeBill.swift in Sources */,
+				82D5E6A22269F74700DD9AE6 /* Mapper.swift in Sources */,
+				82D5E69C2269F74700DD9AE6 /* ScannerDelegate.swift in Sources */,
+				82D5E6A12269F74700DD9AE6 /* Printer.swift in Sources */,
+				82D5E6A02269F74700DD9AE6 /* ScannerUnit.swift in Sources */,
+				82D5E6A62269F74700DD9AE6 /* Router.swift in Sources */,
+				82D5E6982269F74700DD9AE6 /* TaxCalculator.swift in Sources */,
+				82D5E6972269F74700DD9AE6 /* IMapper.swift in Sources */,
+				821FA14D2292A66000D429ED /* GoodsTableViewCell.swift in Sources */,
+				82D5E6942269F74700DD9AE6 /* ViewInput.swift in Sources */,
+				82D5E6932269F74700DD9AE6 /* ViewOutput.swift in Sources */,
+				82D5E69D2269F74700DD9AE6 /* Calculator.swift in Sources */,
+				82D5E69F2269F74700DD9AE6 /* CashMachineAssambly.swift in Sources */,
+				821FA14C2292A66000D429ED /* Goods.swift in Sources */,
+				821FA13F2292A4F200D429ED /* ViewControllerIB.swift in Sources */,
+				82EEDA0522465C7700C72B16 /* AppDelegate.swift in Sources */,
+				82D5E6912269F74700DD9AE6 /* Presenter.swift in Sources */,
+				82E6E4902293E81F00472469 /* ControllerForTableView.swift in Sources */,
+				82D5E69A2269F74700DD9AE6 /* BIllPrinter.swift in Sources */,
+				821FA1532292C60100D429ED /* Assembly.swift in Sources */,
+				82DEEF2322786FCC00423F17 /* Errors.swift in Sources */,
+				82D5E6A42269F74700DD9AE6 /* InteractorInput.swift in Sources */,
+				82D5E6A52269F74700DD9AE6 /* IRouterInput.swift in Sources */,
+				82D5E6A32269F74700DD9AE6 /* Interactor.swift in Sources */,
+				82D5E6952269F74700DD9AE6 /* InteractorOutput.swift in Sources */,
+				82D5E69B2269F74700DD9AE6 /* Scanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		821FA14E2292ADC100D429ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				821FA14F2292ADC100D429ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		82EEDA0D22465C7B00C72B16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82EEDA0E22465C7B00C72B16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82EEDA1122465C7B00C72B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82EEDA1222465C7B00C72B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82EEDA1422465C7B00C72B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VYMQCP44V4;
+				INFOPLIST_FILE = "$(SRCROOT)/CashMachine/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-44.lesson9-CashMachine-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82EEDA1522465C7B00C72B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VYMQCP44V4;
+				INFOPLIST_FILE = "$(SRCROOT)/CashMachine/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-44.lesson9-CashMachine-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82EED9FC22465C7700C72B16 /* Build configuration list for PBXProject "VIPER CashmachineIB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EEDA1122465C7B00C72B16 /* Debug */,
+				82EEDA1222465C7B00C72B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82EEDA1322465C7B00C72B16 /* Build configuration list for PBXNativeTarget "VIPER CashmachineIB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EEDA1422465C7B00C72B16 /* Debug */,
+				82EEDA1522465C7B00C72B16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82EED9F922465C7700C72B16 /* Project object */;
+}
