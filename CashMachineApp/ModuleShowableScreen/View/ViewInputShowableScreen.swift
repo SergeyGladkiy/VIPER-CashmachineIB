@@ -10,5 +10,5 @@ import Foundation
 
 protocol ViewInputShowableScreen: class {
     var output: ViewOutputShowableScreen { get set }
-    func displayItems(_ array: [GoodsTableViewCellViewModel])
+    func deleteIndexPath(row: Int)
 }

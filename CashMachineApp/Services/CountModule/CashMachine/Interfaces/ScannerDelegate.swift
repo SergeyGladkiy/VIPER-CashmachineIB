@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ScannerDelegate: class {
-    func register(item: RegisterableItem)
+    func register(item: RegisterableItem) throws
     func scan(item: ScannableItem) throws
 }

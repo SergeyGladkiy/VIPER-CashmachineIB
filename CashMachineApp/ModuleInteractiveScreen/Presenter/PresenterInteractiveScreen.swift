@@ -32,18 +32,18 @@ extension PresenterInteractiveScreen: ViewOutputInteractiveScreen {
         interactor.scanItem(code: code, quantity: quantity)
     }
     
-    func payButtonTapped(name: [String]) {
-        interactor.pay(name: name)
+    func payButtonTapped() {
+        interactor.pay()
     }
     
     func transitionButtonTapped() {
-        
+        interactor.dataOfItems()
     }
 }
 
 extension PresenterInteractiveScreen: InteractorOutputInteractiveScreen {
     
-    func readyPrintBill(data: String) {
+    func readyBill(data: String) {
         viewInput.displayBill(data: data)
     }
     
@@ -51,7 +51,12 @@ extension PresenterInteractiveScreen: InteractorOutputInteractiveScreen {
         viewInput.displayError(errorMessage)
     }
     
-    func itemsForTableView(array: [GoodsTableViewCellViewModel]) {
-        viewInput.demonstrationItemsforTableView(array: array)
+    func readyInformationOnItems(_ array: [GoodsTableViewCellViewModel]) {
+        router.dataForDisplay(array)
     }
+    
+    func occurSuccessfulAction(_ message: String) {
+        viewInput.displaySuccessfulAction(message)
+    }
+    
 }

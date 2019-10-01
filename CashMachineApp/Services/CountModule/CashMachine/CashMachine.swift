@@ -10,6 +10,7 @@ import Foundation
 
 class CashMachine {
     
+    // попытаться сделать сквойзные параметры
     private var registeredGoods: [RegisterableItem] = []
     private var shoplist: [ScannableItem] = []
     
@@ -40,20 +41,23 @@ class CashMachine {
         return sum
     }
     
-    func pay(name: [String]) {
+    func pay() {
         let taxableItems = mapper.makeTaxableItems(scannedGoods: shoplist, registeredGoods: registeredGoods)
         let printableItems = mapper.makePrintableItems(scannedGoods: shoplist, registeredGoods: registeredGoods)
-        let mainItems = mapper.makeMainItems(name: name, printableItems: printableItems)
         let sumTax = taxCalculator.countTax(array: taxableItems)
         let amount = sumShopList()
         let fullAmount = sumTax + amount
-        let bill = billPrinter.countBill(array: mainItems, cachierInf: cashierCredentials, totalTax: sumTax, sum: fullAmount)
+        let bill = billPrinter.countBill(array: printableItems, cachierInf: cashierCredentials, totalTax: sumTax, sum: fullAmount)
        billPrinter.printCheck(bill)
         shoplist = [ScannableItem]()
     }
     
-    func makeForTableView() -> [GoodsTableViewCellViewModel] {
-        return mapper.makeDemonstrationItems(scannedGoods: shoplist, registeredGoods: registeredGoods)
+    func dataOfScannedItem() -> [GoodsTableViewCellViewModel] {
+        return mapper.information(scannedGoods: shoplist, registeredGoods: registeredGoods)
+    }
+    
+    func removeScannedItem(index: Int) {
+        shoplist.remove(at: index)
     }
 }
 
@@ -61,21 +65,17 @@ class CashMachine {
 
 extension CashMachine: ScannerDelegate {
     
-    
-    func register(item: RegisterableItem) {
+    func register(item: RegisterableItem) throws {
         // регистрируемое проверяем в массиве зарегистрированнх
         for i in registeredGoods {
             if i.code == item.code {
-                return
+                throw CashmashineErrors.repeatedRegistration
             }
         }
         registeredGoods.append(item)
     }
     
-    
-    //
     func scan(item: ScannableItem) throws  { // throws должна быть помечина
-        
         // ищем товар в отсканированных и если находим увеличиваем кол-во
         for i in 0..<shoplist.count {
             if item.code == shoplist[i].code {

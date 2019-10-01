@@ -11,7 +11,6 @@ import Foundation
 protocol InteractorInputInteractiveScreen {
     func registerItem(name: String, code: String, priceCurrency: String, priceValue: Double, tax: TaxMode)
     func scanItem(code: String, quantity: Double) 
-    func pay(name: [String])
-    func forError(_ errorMessage: String)
-    func forTableView(array: [GoodsTableViewCellViewModel])
+    func pay()
+    func dataOfItems()
 }

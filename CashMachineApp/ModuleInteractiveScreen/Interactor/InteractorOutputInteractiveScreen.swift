@@ -9,9 +9,8 @@
 import Foundation
 
 protocol InteractorOutputInteractiveScreen {
-    func readyPrintBill(data: String)
+    func readyBill(data: String)
     func occurError(_ errorMessage: String)
-    func itemsForTableView(array: [GoodsTableViewCellViewModel])
+    func occurSuccessfulAction(_ message: String)
+    func readyInformationOnItems(_ array: [GoodsTableViewCellViewModel])
 }
-
-

@@ -21,7 +21,7 @@ extension Printer: BillPrinter {
     }
     
     
-    func countBill(array: [MainItem], cachierInf: String, totalTax: Double, sum: Double) -> String {
+    func countBill(array: [PrintableItem], cachierInf: String, totalTax: Double, sum: Double) -> String {
         
         if array.isEmpty {
             return "Не было сосканировано ни одного товара"

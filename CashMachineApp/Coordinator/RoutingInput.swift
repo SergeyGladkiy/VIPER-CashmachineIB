@@ -11,6 +11,6 @@ import UIKit
 
 protocol RoutingInput {
     func start() -> UIViewController
-    func showShoppingItems(_ arrayGoods: [GoodsTableViewCellViewModel])
+    func dataForDisplay(_ array: [GoodsTableViewCellViewModel])
     func back()
 }

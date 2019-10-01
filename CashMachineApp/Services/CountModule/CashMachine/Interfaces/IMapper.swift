@@ -11,7 +11,6 @@ import Foundation
 protocol IMapper {
     func makeTaxableItems(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [TaxableItem]
     func makePrintableItems(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [PrintableItem]
-    func makeMainItems(name: [String], printableItems: [PrintableItem]) -> [MainItem]
     
-    func makeDemonstrationItems(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [GoodsTableViewCellViewModel]
+    func information(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [GoodsTableViewCellViewModel]
 }

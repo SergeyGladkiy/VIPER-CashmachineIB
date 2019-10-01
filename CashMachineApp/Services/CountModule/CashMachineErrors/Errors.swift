@@ -10,6 +10,7 @@ import Foundation
 
 enum CashmashineErrors {
     case goodsNotFound
+    case repeatedRegistration
 }
 
 extension CashmashineErrors: Error {
@@ -17,6 +18,8 @@ extension CashmashineErrors: Error {
         switch self {
         case .goodsNotFound:
             return "код не найден в зарегистрированной базе товаров"
+        case .repeatedRegistration:
+            return "товар с таким кодом уже зарегистрирован"
         }
     }
 }

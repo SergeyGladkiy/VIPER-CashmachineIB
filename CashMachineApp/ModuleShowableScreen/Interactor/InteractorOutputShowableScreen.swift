@@ -9,5 +9,5 @@
 import Foundation
 
 protocol InteractorOutputShowableScreen: class {
-    func readyItems(_ array: [GoodsTableViewCellViewModel])
+    func deletedItem(_ number: Int)
 }

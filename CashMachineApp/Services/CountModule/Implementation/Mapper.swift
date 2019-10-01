@@ -41,19 +41,7 @@ extension Mapper: IMapper {
         return arPrintableItems
     }
     
-    func makeMainItems(name: [String], printableItems: [PrintableItem]) -> [MainItem] {
-        var arrayMainItems = [MainItem]()
-        for i in name {
-            for j in printableItems {
-                if i == j.name {
-                arrayMainItems.append(MainItem(code: j.code, name: i, quantity: j.quantity, priceValue: j.priceValue))
-                }
-            }
-        }
-        return arrayMainItems
-    }
-    
-    func makeDemonstrationItems(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [GoodsTableViewCellViewModel] {
+    func information(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [GoodsTableViewCellViewModel] {
         var arrayTableView = [GoodsTableViewCellViewModel]()
         for i in scannedGoods {
             for j in registeredGoods {

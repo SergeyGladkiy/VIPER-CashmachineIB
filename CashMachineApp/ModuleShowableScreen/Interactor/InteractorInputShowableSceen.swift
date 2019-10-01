@@ -10,5 +10,4 @@ import Foundation
 
 protocol InteractorInputShowableScreen: class {
     func remove(at: Int)
-    func prepareData()
 }

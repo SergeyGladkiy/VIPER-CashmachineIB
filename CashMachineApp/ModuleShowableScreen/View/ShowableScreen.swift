@@ -14,7 +14,7 @@ class ShowableScreen: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private var goodsArray = [GoodsTableViewCellViewModel]()
+    var purchases = [GoodsTableViewCellViewModel]()
     
 //    @IBAction func backward(_ sender: UIButton) {
 //        performSegue(withIdentifier: "unwindSegue", sender: nil)
@@ -25,8 +25,7 @@ class ShowableScreen: UIViewController {
         view.backgroundColor = .gray
         layout()
         setUpUI()
-        
-        
+        tableView.reloadData()
     }
     
     private func layout() {
@@ -46,11 +45,12 @@ extension ShowableScreen {
         let nib = UINib(nibName: "GoodsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "GoodsTableViewCell")
         tableView.dataSource = self
-        tableView.reloadData()
+        tableView.delegate = self
     }
 }
 
 extension ShowableScreen: ViewInputShowableScreen {
+   
     var output: ViewOutputShowableScreen {
         get {
             return outputView
@@ -60,19 +60,18 @@ extension ShowableScreen: ViewInputShowableScreen {
         }
     }
     
-    func displayItems(_ array: [GoodsTableViewCellViewModel]) {
-        goodsArray = array
+    func deleteIndexPath(row: Int) {
+        purchases.remove(at: row)
+        tableView.deleteRows(at: [IndexPath(row: row, section: 0)], with: .fade)
     }
-    
-    
     
 }
 
-extension ShowableScreen: UITableViewDataSource {
+extension ShowableScreen: UITableViewDataSource, UITableViewDelegate {
     
     // второй метод нам говорит: сколько ячеек должно быть в одной секции
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return goodsArray.count
+        return purchases.count
     }
     
     // этот метод нам говорит, что у нас должно содержаться в ячейке
@@ -80,7 +79,7 @@ extension ShowableScreen: UITableViewDataSource {
         
         // dequeueReusableCell - ячейка переиспользуется
         let cell = tableView.dequeueReusableCell(withIdentifier: "GoodsTableViewCell", for: indexPath) as! GoodsTableViewCell
-        let goods = goodsArray[indexPath.row]
+        let goods = purchases[indexPath.row]
         cell.viewModel = goods
         
         return cell
@@ -90,7 +89,7 @@ extension ShowableScreen: UITableViewDataSource {
         if editingStyle == .delete {
             self.outputView.deleteButtonPressed(item: indexPath.row)
         }
-        tableView.deleteRows(at: [indexPath], with: .fade)
+        
     }
     
     

@@ -12,7 +12,6 @@ class InteractiveScreen: UIViewController {
     
     private weak var outputView: ViewOutputInteractiveScreen!
     
-    
     @IBOutlet private weak var name: UITextField!
     @IBOutlet private weak var registeredCode: UITextField!
     @IBOutlet private weak var currencyUnit: UITextField!
@@ -30,7 +29,9 @@ class InteractiveScreen: UIViewController {
     
     @IBOutlet private weak var textView: UITextView!
     
+    @IBOutlet weak var regLabel: UILabel!
     
+    @IBOutlet weak var LabelsStack: UIStackView!
     // второй вариант: сегвей от контроллера, через идентификатор, с использованием @IBAction
 //     @IBAction func sendPressed(button: UIButton) {
 //        performSegue(withIdentifier: "detailSegue", sender: nil) // идентификотор указываем у сегвея в сториборде
@@ -46,10 +47,10 @@ class InteractiveScreen: UIViewController {
 //        guard let controllerForTableView = segue.destination as? ShowableScreen else { return }
 //        controllerForTableView.goodsArray = arrayGoods
 //    }
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         layout()
     }
     
@@ -76,25 +77,25 @@ extension InteractiveScreen {
         register.layer.borderWidth = 1
         register.layer.cornerRadius = 5
         
-        scan.layer.borderWidth = 1
-        scan.layer.cornerRadius = 5
+//        scan.layer.borderWidth = 1
+//        scan.layer.cornerRadius = 5
+        
         
         pay.layer.borderWidth = 1
         pay.layer.cornerRadius = 5
         
-        //textView.layer.borderWidth = 1
-        //textView.layer.cornerRadius = 5
+        textView.layer.borderWidth = 1
+        textView.layer.cornerRadius = 5
         
         toShoppingList.layer.borderWidth = 1
         toShoppingList.layer.cornerRadius = 5
         
-        //taxModeSegment.insertSegment(withTitle: "0,13432", at: 0, animated: true) пример добавления через код
+        
         
     }
 }
 
 extension InteractiveScreen {
-    
     
     @IBAction private func register(_ sender: UIButton) {
         
@@ -168,17 +169,12 @@ extension InteractiveScreen {
         }
     }
     
-    @IBAction func transitionToList(_ sender: Any) {
+    @IBAction func transitionToList(_ sender: UIButton) {
         outputView.transitionButtonTapped()
     }
     
     @IBAction private func pay(_ sender: UIButton) {
-        
-        var arrrayGoods = [String]()
-        for item in mainArrayGoods[0..<mainArrayGoods.count] {
-            arrrayGoods.append(item.name)
-        }
-        outputView.payButtonTapped(name: arrrayGoods)
+        outputView.payButtonTapped()
     }
 }
 
@@ -197,16 +193,16 @@ extension InteractiveScreen: ViewInputInteractiveScreen {
         textView.text = data
     }
     
+    func displaySuccessfulAction(_ message: String) {
+        textView.text = message
+    }
+    
     func displayError(_ errorMessage: String) {
         
         let alert = UIAlertController(title: "Wrong format", message: errorMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-    }
-    
-    func demonstrationItemsforTableView(array: [GoodsTableViewCellViewModel]) {
-        arrayGoods = array
     }
     
 }

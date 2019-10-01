@@ -41,8 +41,19 @@
 		82D5E6A32269F74700DD9AE6 /* InteractorInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68A2269F74700DD9AE6 /* InteractorInteractiveScreen.swift */; };
 		82D5E6A42269F74700DD9AE6 /* InteractorInputInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68B2269F74700DD9AE6 /* InteractorInputInteractiveScreen.swift */; };
 		82D5E6A52269F74700DD9AE6 /* RoutingInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E68D2269F74700DD9AE6 /* RoutingInput.swift */; };
+		82D976A123427DCB009CC897 /* ShowableScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6E48F2293E81F00472469 /* ShowableScreen.swift */; };
+		82D976B023432B11009CC897 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976A423432B10009CC897 /* Label.swift */; };
+		82D976B123432B11009CC897 /* SimpleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976A523432B10009CC897 /* SimpleLabel.swift */; };
+		82D976B223432B11009CC897 /* ILabelDising.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976A623432B10009CC897 /* ILabelDising.swift */; };
+		82D976B323432B11009CC897 /* SimpleField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976A823432B10009CC897 /* SimpleField.swift */; };
+		82D976B423432B11009CC897 /* IFieldDising.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976A923432B10009CC897 /* IFieldDising.swift */; };
+		82D976B523432B11009CC897 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976AA23432B10009CC897 /* Field.swift */; };
+		82D976B623432B11009CC897 /* IButtonDising.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976AC23432B10009CC897 /* IButtonDising.swift */; };
+		82D976B723432B11009CC897 /* SimpeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976AD23432B10009CC897 /* SimpeButton.swift */; };
+		82D976B823432B11009CC897 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976AE23432B10009CC897 /* Button.swift */; };
+		82D976B923432B11009CC897 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976AF23432B10009CC897 /* Structs.swift */; };
+		82D976C42343DE8D009CC897 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D976C32343DE8D009CC897 /* StackView.swift */; };
 		82DEEF2322786FCC00423F17 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DEEF2222786FCC00423F17 /* Errors.swift */; };
-		82E6E4902293E81F00472469 /* VisiblePurchasesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6E48F2293E81F00472469 /* VisiblePurchasesScreen.swift */; };
 		82EEDA0522465C7700C72B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EEDA0422465C7700C72B16 /* AppDelegate.swift */; };
 		82EEDA0C22465C7B00C72B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EEDA0B22465C7B00C72B16 /* Assets.xcassets */; };
 		82EEDA0F22465C7B00C72B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EEDA0D22465C7B00C72B16 /* LaunchScreen.storyboard */; };
@@ -83,8 +94,19 @@
 		82D5E68A2269F74700DD9AE6 /* InteractorInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E68B2269F74700DD9AE6 /* InteractorInputInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInputInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E68D2269F74700DD9AE6 /* RoutingInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingInput.swift; sourceTree = "<group>"; };
+		82D976A423432B10009CC897 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		82D976A523432B10009CC897 /* SimpleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleLabel.swift; sourceTree = "<group>"; };
+		82D976A623432B10009CC897 /* ILabelDising.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILabelDising.swift; sourceTree = "<group>"; };
+		82D976A823432B10009CC897 /* SimpleField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleField.swift; sourceTree = "<group>"; };
+		82D976A923432B10009CC897 /* IFieldDising.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFieldDising.swift; sourceTree = "<group>"; };
+		82D976AA23432B10009CC897 /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		82D976AC23432B10009CC897 /* IButtonDising.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IButtonDising.swift; sourceTree = "<group>"; };
+		82D976AD23432B10009CC897 /* SimpeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpeButton.swift; sourceTree = "<group>"; };
+		82D976AE23432B10009CC897 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		82D976AF23432B10009CC897 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		82D976C32343DE8D009CC897 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		82DEEF2222786FCC00423F17 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		82E6E48F2293E81F00472469 /* VisiblePurchasesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisiblePurchasesScreen.swift; sourceTree = "<group>"; };
+		82E6E48F2293E81F00472469 /* ShowableScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowableScreen.swift; sourceTree = "<group>"; };
 		82EEDA0122465C7700C72B16 /* VIPER CashmachineIB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VIPER CashmachineIB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82EEDA0422465C7700C72B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82EEDA0B22465C7B00C72B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,20 +125,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		821EE3DC233F9E11002C7C59 /* ModuleVisiblePurchasesScreen */ = {
+		821EE3DC233F9E11002C7C59 /* ModuleShowableScreen */ = {
 			isa = PBXGroup;
 			children = (
 				821EE3DD233F9EB2002C7C59 /* View */,
 				821EE3E6233FED89002C7C59 /* Presenter */,
 				821EE3FA233FFE17002C7C59 /* Interactor */,
 			);
-			path = ModuleVisiblePurchasesScreen;
+			path = ModuleShowableScreen;
 			sourceTree = "<group>";
 		};
 		821EE3DD233F9EB2002C7C59 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82E6E48F2293E81F00472469 /* VisiblePurchasesScreen.swift */,
+				82E6E48F2293E81F00472469 /* ShowableScreen.swift */,
 				821EE3F8233FF96B002C7C59 /* ViewInputShowableScreen.swift */,
 				821EE3F6233FF953002C7C59 /* ViewOutputShowableScreen.swift */,
 				821EE3ED233FF6DA002C7C59 /* Cell */,
@@ -214,10 +236,11 @@
 			isa = PBXGroup;
 			children = (
 				821EE3FD233FFF6F002C7C59 /* Supporting */,
+				82D976A223432B10009CC897 /* CustomDesign */,
 				821EE3E9233FF0B1002C7C59 /* Services */,
 				821EE3DE233FAD02002C7C59 /* Coordinator */,
 				82D5E66E2269F74700DD9AE6 /* ModuleInteractiveScreen */,
-				821EE3DC233F9E11002C7C59 /* ModuleVisiblePurchasesScreen */,
+				821EE3DC233F9E11002C7C59 /* ModuleShowableScreen */,
 			);
 			path = CashMachineApp;
 			sourceTree = "<group>";
@@ -292,6 +315,96 @@
 				82D5E6892269F74700DD9AE6 /* Mapper.swift */,
 			);
 			path = Implementation;
+			sourceTree = "<group>";
+		};
+		82D976A223432B10009CC897 /* CustomDesign */ = {
+			isa = PBXGroup;
+			children = (
+				82D976AF23432B10009CC897 /* Structs.swift */,
+				82D976A323432B10009CC897 /* Label */,
+				82D976A723432B10009CC897 /* Field */,
+				82D976AB23432B10009CC897 /* Button */,
+				82D976C32343DE8D009CC897 /* StackView.swift */,
+			);
+			path = CustomDesign;
+			sourceTree = "<group>";
+		};
+		82D976A323432B10009CC897 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				82D976A423432B10009CC897 /* Label.swift */,
+				82D976BA2343AA1A009CC897 /* InterfaceLabel */,
+				82D976BC2343AA3C009CC897 /* SettingDesignLabel */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		82D976A723432B10009CC897 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				82D976AA23432B10009CC897 /* Field.swift */,
+				82D976BD2343AB1D009CC897 /* InterfaceField */,
+				82D976BE2343AB33009CC897 /* SettingDesignField */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
+		82D976AB23432B10009CC897 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				82D976AE23432B10009CC897 /* Button.swift */,
+				82D976C02343B632009CC897 /* InterfaceButton */,
+				82D976C12343B7C6009CC897 /* SettingDisingButton */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		82D976BA2343AA1A009CC897 /* InterfaceLabel */ = {
+			isa = PBXGroup;
+			children = (
+				82D976A623432B10009CC897 /* ILabelDising.swift */,
+			);
+			path = InterfaceLabel;
+			sourceTree = "<group>";
+		};
+		82D976BC2343AA3C009CC897 /* SettingDesignLabel */ = {
+			isa = PBXGroup;
+			children = (
+				82D976A523432B10009CC897 /* SimpleLabel.swift */,
+			);
+			path = SettingDesignLabel;
+			sourceTree = "<group>";
+		};
+		82D976BD2343AB1D009CC897 /* InterfaceField */ = {
+			isa = PBXGroup;
+			children = (
+				82D976A923432B10009CC897 /* IFieldDising.swift */,
+			);
+			path = InterfaceField;
+			sourceTree = "<group>";
+		};
+		82D976BE2343AB33009CC897 /* SettingDesignField */ = {
+			isa = PBXGroup;
+			children = (
+				82D976A823432B10009CC897 /* SimpleField.swift */,
+			);
+			path = SettingDesignField;
+			sourceTree = "<group>";
+		};
+		82D976C02343B632009CC897 /* InterfaceButton */ = {
+			isa = PBXGroup;
+			children = (
+				82D976AC23432B10009CC897 /* IButtonDising.swift */,
+			);
+			path = InterfaceButton;
+			sourceTree = "<group>";
+		};
+		82D976C12343B7C6009CC897 /* SettingDisingButton */ = {
+			isa = PBXGroup;
+			children = (
+				82D976AD23432B10009CC897 /* SimpeButton.swift */,
+			);
+			path = SettingDisingButton;
 			sourceTree = "<group>";
 		};
 		82DEEF2122786F9500423F17 /* CashMachineErrors */ = {
@@ -391,27 +504,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D5E6962269F74700DD9AE6 /* CashMachine.swift in Sources */,
+				82D976B323432B11009CC897 /* SimpleField.swift in Sources */,
 				82D5E6992269F74700DD9AE6 /* MakeBill.swift in Sources */,
 				82D5E6A22269F74700DD9AE6 /* Mapper.swift in Sources */,
 				82D5E69C2269F74700DD9AE6 /* ScannerDelegate.swift in Sources */,
+				82D976C42343DE8D009CC897 /* StackView.swift in Sources */,
 				82D5E6A12269F74700DD9AE6 /* Printer.swift in Sources */,
 				82D5E6A02269F74700DD9AE6 /* ScannerUnit.swift in Sources */,
 				821EE401233FFFC9002C7C59 /* InteractorOutputShowableScreen.swift in Sources */,
 				82D5E6982269F74700DD9AE6 /* TaxCalculator.swift in Sources */,
 				82D5E6972269F74700DD9AE6 /* IMapper.swift in Sources */,
 				821EE3E3233FC93F002C7C59 /* AppCoordinatorProtocol.swift in Sources */,
+				82D976B123432B11009CC897 /* SimpleLabel.swift in Sources */,
 				821EE3FC233FFE9C002C7C59 /* InteractorShowableScreen.swift in Sources */,
 				821EE3F3233FF6DA002C7C59 /* GoodsTableViewCell.swift in Sources */,
 				821EE404234012AD002C7C59 /* EntityShowableScreen.swift in Sources */,
+				82D976B723432B11009CC897 /* SimpeButton.swift in Sources */,
+				82D976B523432B11009CC897 /* Field.swift in Sources */,
 				82D5E6942269F74700DD9AE6 /* ViewInputInteractiveScree.swift in Sources */,
+				82D976B023432B11009CC897 /* Label.swift in Sources */,
 				82D5E6932269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift in Sources */,
+				82D976A123427DCB009CC897 /* ShowableScreen.swift in Sources */,
 				82D5E69D2269F74700DD9AE6 /* Calculator.swift in Sources */,
 				82D5E69F2269F74700DD9AE6 /* CashMachineAssambly.swift in Sources */,
 				821EE3E5233FCFB2002C7C59 /* CoordinatorRouting.swift in Sources */,
 				82EEDA0522465C7700C72B16 /* AppDelegate.swift in Sources */,
 				82D5E6912269F74700DD9AE6 /* PresenterInteractiveScreen.swift in Sources */,
-				82E6E4902293E81F00472469 /* VisiblePurchasesScreen.swift in Sources */,
 				821EE3F9233FF96B002C7C59 /* ViewInputShowableScreen.swift in Sources */,
+				82D976B923432B11009CC897 /* Structs.swift in Sources */,
 				82D5E69A2269F74700DD9AE6 /* BIllPrinter.swift in Sources */,
 				821EE3FF233FFFB4002C7C59 /* InteractorInputShowableSceen.swift in Sources */,
 				821EE3E0233FC689002C7C59 /* AppCoordinator.swift in Sources */,
@@ -419,12 +539,16 @@
 				821EE3E8233FEDBE002C7C59 /* PresenterShowableScreen.swift in Sources */,
 				82D5E6A42269F74700DD9AE6 /* InteractorInputInteractiveScreen.swift in Sources */,
 				82D5E6A52269F74700DD9AE6 /* RoutingInput.swift in Sources */,
+				82D976B423432B11009CC897 /* IFieldDising.swift in Sources */,
 				821EE3F7233FF953002C7C59 /* ViewOutputShowableScreen.swift in Sources */,
 				821EE3F5233FF716002C7C59 /* InteractiveScreen.swift in Sources */,
 				82D5E6A32269F74700DD9AE6 /* InteractorInteractiveScreen.swift in Sources */,
 				82D5E6952269F74700DD9AE6 /* InteractorOutputInteractiveScreen.swift in Sources */,
 				821EE3F2233FF6DA002C7C59 /* Goods.swift in Sources */,
+				82D976B623432B11009CC897 /* IButtonDising.swift in Sources */,
+				82D976B223432B11009CC897 /* ILabelDising.swift in Sources */,
 				82D5E69B2269F74700DD9AE6 /* Scanner.swift in Sources */,
+				82D976B823432B11009CC897 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,7 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = "$(SRCROOT)/CashMachineApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CashMachineApp/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VYMQCP44V4;
-				INFOPLIST_FILE = "$(SRCROOT)/CashMachineApp/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CashMachineApp/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

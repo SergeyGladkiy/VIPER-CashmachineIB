@@ -11,13 +11,28 @@ import UIKit
 
 class CoordinatorRouting {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    private var interactiveScreen: InteractiveScreen!
+    private var countService: CashMachine!
+    
+    private var showableScreen: ShowableScreen!
+    private var interactorShowableScreen: InteractorShowableScreen!
+    private var entityShowableScreen: EntityShowableScreen!
 }
 
 extension CoordinatorRouting {
     
     //MARK: Build a sreen to display purchases - VisisblePurchasesScreen
-    private func buildVisiblePurchaseScreen() -> UIViewController {
-        
+    private func buildModuleShowableScreen() -> UIViewController {
+        self.entityShowableScreen = EntityShowableScreen()
+        self.interactorShowableScreen = InteractorShowableScreen()
+        self.interactorShowableScreen.entity = self.entityShowableScreen
+        let view = storyboard.instantiateViewController(withIdentifier: "ShowableScreen") as! ShowableScreen
+        let presenter = PresenterShowableScreen(view: view,
+                                                interactor: self.interactorShowableScreen,
+                                                router: self)
+        view.output = presenter
+        self.interactorShowableScreen.output = presenter
+        return view
     }
     
 }
@@ -28,21 +43,28 @@ extension CoordinatorRouting: RoutingInput {
     func start() -> UIViewController {
         let interactor = InteractorInteractiveScreen()
         let vc = storyboard.instantiateViewController(withIdentifier: "InteractiveScreen") as! InteractiveScreen
+        self.interactiveScreen = vc
         let presenter = PresenterInteractiveScreen(interactor: interactor, router: self, viewInput: vc)
-        let cashMachine = CashMachineAssembly.build(device: interactor , credentials: "Tanaeva Kristina Aleksandrovna")
+        self.countService = CashMachineAssembly.build(device: interactor, credentials: "Tanaeva Kristina Aleksandrovna")
         vc.output = presenter
         interactor.output = presenter
-        interactor.entity = cashMachine
+        interactor.countService = self.countService
         return vc
     }
     
-    func showShoppingItems(_ arrayGoods: [GoodsTableViewCellViewModel]) {
-        
+    //MARK: Transition to ShowableScreen from InteractiveScreen
+    func dataForDisplay(_ array: [GoodsTableViewCellViewModel]) {
+        self.showableScreen = buildModuleShowableScreen() as? ShowableScreen
+        self.showableScreen.purchases = array
+        self.entityShowableScreen.arrayItems = array
+        self.entityShowableScreen.onDeleted = { index in
+            self.countService.removeScannedItem(index: index)
+        }
+        self.interactiveScreen.present(self.showableScreen, animated: true, completion: nil)
     }
     
+    //MARK: Dismiss VCShowableScreen, transition to InteractiveScreen
     func back() {
-        
+        self.showableScreen.dismiss(animated: true, completion: nil)
     }
-    
-    
 }

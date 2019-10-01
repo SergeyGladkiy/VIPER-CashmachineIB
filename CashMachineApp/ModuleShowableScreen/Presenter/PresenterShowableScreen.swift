@@ -32,7 +32,7 @@ extension PresenterShowableScreen: ViewOutputShowableScreen {
 }
 
 extension PresenterShowableScreen: InteractorOutputShowableScreen {
-    func readyItems(_ array: [GoodsTableViewCellViewModel]) {
-        view.displayItems(array)
+    func deletedItem(_ number: Int) {
+        view.deleteIndexPath(row: number)
     }
 }

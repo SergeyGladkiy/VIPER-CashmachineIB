@@ -15,13 +15,8 @@ class InteractorShowableScreen {
 }
 
 extension InteractorShowableScreen: InteractorInputShowableScreen {
-    func prepareData() {
-        output.readyItems(entity.arrayItems)
-    }
-    
     func remove(at: Int) {
         entity.remove(at: at)
-        output.readyItems(entity.arrayItems)
+        output.deletedItem(at)
     }
-    
 }

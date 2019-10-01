@@ -10,21 +10,11 @@ import Foundation
 
 protocol BillPrinter: MakeBill {
     
-    func countBill(array: [MainItem], cachierInf: String, totalTax: Double, sum: Double) -> String
+    func countBill(array: [PrintableItem], cachierInf: String, totalTax: Double, sum: Double) -> String
     
 }
 
 struct PrintableItem {
-    let code: String
-    let name: String
-    let quantity: Double
-    let priceValue: Double
-    var fullPrice: Double {
-        return quantity * priceValue
-    }
-}
-
-struct MainItem {
     let code: String
     let name: String
     let quantity: Double

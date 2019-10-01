@@ -11,49 +11,47 @@ import Foundation
 class InteractorInteractiveScreen {
     
     var output: InteractorOutputInteractiveScreen!
-    var entity: CashMachine!
+    var countService: CashMachine!
 
 }
 
 extension InteractorInteractiveScreen: InteractorInputInteractiveScreen {
     
     func registerItem(name: String, code: String, priceCurrency: String, priceValue: Double, tax: TaxMode) {
-        entity.register(item: RegisterableItem(name: name, code: code, price: Price(currencyUnit: priceCurrency, value: priceValue), tax: tax))
-        
+        do {
+            try countService.register(item: RegisterableItem(name: name, code: code, price: Price(currencyUnit: priceCurrency, value: priceValue), tax: tax))
+            output.occurSuccessfulAction("Registration was successful")
+        } catch CashmashineErrors.repeatedRegistration {
+            output.occurError(CashmashineErrors.repeatedRegistration.localizedDescription)
+        } catch {
+            output.occurError("Error")
+        }
     }
     
     func scanItem(code: String, quantity: Double) {
         do {
-            try entity.scan(item: ScannableItem(code: code, quantity: quantity))
+            try countService.scan(item: ScannableItem(code: code, quantity: quantity))
+            output.occurSuccessfulAction("Scan was successful")
         } catch let error as CashmashineErrors {
-            forError(error.localizedDescription)
+            output.occurError(error.localizedDescription)
             return
         } catch {
-            forError("Error")
+            output.occurError("Error")
         }
-        let tableViewArray = entity.makeForTableView()
-        forTableView(array: tableViewArray)
-        
     }
     
-    func pay(name: [String]) {
-        entity.pay(name: name)
-        let tableViewArray = entity.makeForTableView()
-        forTableView(array: tableViewArray)
+    func pay() {
+        countService.pay()
     }
-    
-    func forError(_ errorMessage: String) { 
-        output.occurError(errorMessage)
+
+    func dataOfItems() {
+        let array = countService.dataOfScannedItem()
+        output.readyInformationOnItems(array)
     }
-    
-    func forTableView(array: [GoodsTableViewCellViewModel]) {
-        output.itemsForTableView(array: array)
-    }
-    
 }
 
 extension InteractorInteractiveScreen: MakeBill {
     func printCheck(_ data: String) {
-        output.readyPrintBill(data: data)
+        output.readyBill(data: data)
     }
 }
