@@ -52,6 +52,7 @@ extension InteractorInteractiveScreen: InteractorInputInteractiveScreen {
 
 extension InteractorInteractiveScreen: MakeBill {
     func printCheck(_ data: String) {
+        print("arrived")
         output.readyBill(data: data)
     }
 }

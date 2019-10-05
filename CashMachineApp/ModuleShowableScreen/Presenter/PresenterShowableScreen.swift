@@ -32,6 +32,10 @@ extension PresenterShowableScreen: ViewOutputShowableScreen {
 }
 
 extension PresenterShowableScreen: InteractorOutputShowableScreen {
+    func readyItems(_ array: [InformationCellViewModel]) {
+        view.setDataOfItems(array)
+    }
+    
     func deletedItem(_ number: Int) {
         view.deleteIndexPath(row: number)
     }

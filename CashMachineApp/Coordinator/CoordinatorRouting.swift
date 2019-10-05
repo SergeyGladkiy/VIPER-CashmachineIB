@@ -27,6 +27,7 @@ extension CoordinatorRouting {
         self.interactorShowableScreen = InteractorShowableScreen()
         self.interactorShowableScreen.entity = self.entityShowableScreen
         let view = storyboard.instantiateViewController(withIdentifier: "ShowableScreen") as! ShowableScreen
+        //let view = ShowableScreen()
         let presenter = PresenterShowableScreen(view: view,
                                                 interactor: self.interactorShowableScreen,
                                                 router: self)
@@ -44,7 +45,8 @@ extension CoordinatorRouting: RoutingInput {
         let interactor = InteractorInteractiveScreen()
         let vc = storyboard.instantiateViewController(withIdentifier: "InteractiveScreen") as! InteractiveScreen
         self.interactiveScreen = vc
-        let presenter = PresenterInteractiveScreen(interactor: interactor, router: self, viewInput: vc)
+        let mapper = MapperInteractiveScreen()
+        let presenter = PresenterInteractiveScreen(interactor: interactor, router: self, viewInput: vc, mapper: mapper)
         self.countService = CashMachineAssembly.build(device: interactor, credentials: "Tanaeva Kristina Aleksandrovna")
         vc.output = presenter
         interactor.output = presenter
@@ -53,10 +55,10 @@ extension CoordinatorRouting: RoutingInput {
     }
     
     //MARK: Transition to ShowableScreen from InteractiveScreen
-    func dataForDisplay(_ array: [GoodsTableViewCellViewModel]) {
+    func dataForDisplay(_ array: [InformationCellViewModel]) {
         self.showableScreen = buildModuleShowableScreen() as? ShowableScreen
-        self.showableScreen.purchases = array
         self.entityShowableScreen.arrayItems = array
+        self.interactorShowableScreen.prepareShowableItems()
         self.entityShowableScreen.onDeleted = { index in
             self.countService.removeScannedItem(index: index)
         }

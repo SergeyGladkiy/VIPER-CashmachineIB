@@ -12,13 +12,13 @@ class Label: UILabel {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let desing = buildDising()
-        textColor = desing.textColor
-        font = desing.font
+        let design = buildDisign()
+        textColor = design.textColor
+        font = design.font
     }
     
-    func buildDising() -> ILabelDising {
-        fatalError("переопредели со своим дизайном, редиска")
+    func buildDisign() -> ILabelDisign {
+        fatalError("переопредели со своим дизайном, не используй в SB этот custom class")
     }
 }
 

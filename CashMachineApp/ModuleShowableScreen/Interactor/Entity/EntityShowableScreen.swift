@@ -9,7 +9,7 @@
 import Foundation
 
 class EntityShowableScreen {
-    var arrayItems = [GoodsTableViewCellViewModel]()
+    var arrayItems = [InformationCellViewModel]()
     var onDeleted: ((Int)-> Void)!
     
     func remove(at: Int) {

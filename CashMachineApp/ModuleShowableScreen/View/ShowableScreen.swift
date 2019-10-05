@@ -14,12 +14,19 @@ class ShowableScreen: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    var purchases = [GoodsTableViewCellViewModel]()
+    private var purchases = [InformationCellViewModel]()
     
 //    @IBAction func backward(_ sender: UIButton) {
 //        performSegue(withIdentifier: "unwindSegue", sender: nil)
 //    }
     
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        view.backgroundColor = .gray
+//        layout()
+//        setUpUI()
+//        tableView.reloadData()
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
@@ -28,28 +35,32 @@ class ShowableScreen: UIViewController {
         tableView.reloadData()
     }
     
-    private func layout() {
-        tableView.layer.borderWidth = 1
-        tableView.layer.cornerRadius = 5
-        
-    }
 }
 
 extension ShowableScreen {
-    
-    @IBAction func backward(_ sender: UIButton) {
-        outputView.backToInteractive()
+    private func layout() {
+        tableView.layer.borderWidth = 1
+        tableView.layer.cornerRadius = 5
     }
     
     private func setUpUI() {
-        let nib = UINib(nibName: "GoodsTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "GoodsTableViewCell")
+        let nib = UINib(nibName: "ShowableItemTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ShowableItemTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
 }
+extension ShowableScreen {
+    @IBAction func backward(_ sender: UIButton) {
+        outputView.backToInteractive()
+    }
+}
 
 extension ShowableScreen: ViewInputShowableScreen {
+    func setDataOfItems(_ array: [InformationCellViewModel]) {
+        purchases = array
+    }
+    
    
     var output: ViewOutputShowableScreen {
         get {
@@ -78,9 +89,9 @@ extension ShowableScreen: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // dequeueReusableCell - ячейка переиспользуется
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GoodsTableViewCell", for: indexPath) as! GoodsTableViewCell
-        let goods = purchases[indexPath.row]
-        cell.viewModel = goods
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowableItemTableViewCell", for: indexPath) as! ShowableItemTableViewCell
+        let product = purchases[indexPath.row]
+        cell.viewModel = product
         
         return cell
     }

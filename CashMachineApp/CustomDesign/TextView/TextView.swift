@@ -1,29 +1,30 @@
 //
-//  Field.swift
-//  lesson9(CashMachine)
+//  TextView.swift
+//  VIPER CashmachineIB
 //
-//  Created by Serg on 11/04/2019.
+//  Created by Serg on 03/10/2019.
 //  Copyright © 2019 Serg. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class Field: UITextField {
+class TextView: UITextView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
         let design = buildDesign()
-        textColor = design.textColor
         font = design.font
+        textColor = design.textColor
+        textAlignment = design.textAlignment
+        isEditable = design.isEditable
         backgroundColor = design.backgroundColor
-        borderStyle = design.borderStyle
-        clearButtonMode = UITextField.ViewMode.unlessEditing
-        layer.borderWidth = design.bounds!.borderWidth
-        layer.cornerRadius = design.bounds!.cornerRadius
+        layer.cornerRadius = design.bounds.cornerRadius
+        layer.borderWidth = design.bounds.borderWidth
         
     }
     
-    func buildDesign() -> IFieldDisign {
+    func buildDesign() -> ITextViewDesign {
         fatalError("переопредели со своим дизайном, не используй в SB этот custom class")
     }
 }

@@ -12,7 +12,7 @@ class Button: UIButton {
     
     override func layoutSubviews() {    
         super.layoutSubviews()
-        let design = buildDesing()
+        let design = buildDesign()
         layer.cornerRadius = design.bounds.cornerRadius
         layer.borderWidth = design.bounds.borderWidth
         titleLabel?.font = design.font
@@ -21,11 +21,12 @@ class Button: UIButton {
         guard let margin = design.bounds.margin else {
             fatalError("don't forget about margin")
         }
-        titleEdgeInsets = margin
+        contentEdgeInsets = margin
+        
+        
     }
     
-    func buildDesing() -> IButtonDising {
-        fatalError("переопредели со своим дизайном, редиска")
-        
+    func buildDesign() -> IButtonDisign {
+        fatalError("переопредели со своим дизайном, не используй в SB этот custom class")
     }
 }

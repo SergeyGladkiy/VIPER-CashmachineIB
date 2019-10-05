@@ -16,42 +16,15 @@ class InteractiveScreen: UIViewController {
     @IBOutlet private weak var registeredCode: UITextField!
     @IBOutlet private weak var currencyUnit: UITextField!
     @IBOutlet private weak var value: UITextField!
-    
-    @IBOutlet weak var taxModeSegment: UISegmentedControl!
-    
-    @IBOutlet weak var scannableCode: UITextField!
+    @IBOutlet private weak var taxModeSegment: UISegmentedControl!
+    @IBOutlet private weak var scannableCode: UITextField!
     @IBOutlet private weak var quantity: UITextField!
     
-    @IBOutlet weak var register: UIButton!
-    @IBOutlet weak var scan: UIButton!
-    @IBOutlet weak var pay: UIButton!
-    @IBOutlet weak var toShoppingList: UIButton!
-    
     @IBOutlet private weak var textView: UITextView!
-    
-    @IBOutlet weak var regLabel: UILabel!
-    
-    @IBOutlet weak var LabelsStack: UIStackView!
-    // второй вариант: сегвей от контроллера, через идентификатор, с использованием @IBAction
-//     @IBAction func sendPressed(button: UIButton) {
-//        performSegue(withIdentifier: "detailSegue", sender: nil) // идентификотор указываем у сегвея в сториборде
-//     }
-//
-//    @IBAction func unwindToMainScreen(segue: UIStoryboardSegue) {
-//        guard segue.identifier == "unwindSegue" else { return }
-//        guard let svc = segue.source as? ShowableScreen else { return }
-//        mainArrayGoods = svc.goodsArray
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let controllerForTableView = segue.destination as? ShowableScreen else { return }
-//        controllerForTableView.goodsArray = arrayGoods
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        layout()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -70,29 +43,6 @@ class InteractiveScreen: UIViewController {
         quantity.text = nil
     }
     
-}
-
-extension InteractiveScreen {
-    private func layout() {
-        register.layer.borderWidth = 1
-        register.layer.cornerRadius = 5
-        
-//        scan.layer.borderWidth = 1
-//        scan.layer.cornerRadius = 5
-        
-        
-        pay.layer.borderWidth = 1
-        pay.layer.cornerRadius = 5
-        
-        textView.layer.borderWidth = 1
-        textView.layer.cornerRadius = 5
-        
-        toShoppingList.layer.borderWidth = 1
-        toShoppingList.layer.cornerRadius = 5
-        
-        
-        
-    }
 }
 
 extension InteractiveScreen {
@@ -206,16 +156,3 @@ extension InteractiveScreen: ViewInputInteractiveScreen {
     }
     
 }
-
-
-//extension InteractiveScreen {
-//
-
-//    первый вариант передачи через кнопку
-//    здесь мы готовим переход
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let controllerForTableView = segue.destination as? ControllerForTableView else { return }
-//        controllerForTableView.goodsArray = arrayGoods
-//    }
-    
-//}

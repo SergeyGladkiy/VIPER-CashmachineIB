@@ -13,11 +13,13 @@ class PresenterInteractiveScreen {
     private weak var viewInput: ViewInputInteractiveScreen!
     private var interactor: InteractorInputInteractiveScreen
     private var router: RoutingInput
+    private var mapper: IMapperInteractiveScreen
     
-    init(interactor: InteractorInputInteractiveScreen, router: RoutingInput, viewInput: ViewInputInteractiveScreen) {
+    init(interactor: InteractorInputInteractiveScreen, router: RoutingInput, viewInput: ViewInputInteractiveScreen, mapper: IMapperInteractiveScreen) {
         self.interactor = interactor
         self.router = router
         self.viewInput = viewInput
+        self.mapper = mapper
     }
 }
 
@@ -51,8 +53,9 @@ extension PresenterInteractiveScreen: InteractorOutputInteractiveScreen {
         viewInput.displayError(errorMessage)
     }
     
-    func readyInformationOnItems(_ array: [GoodsTableViewCellViewModel]) {
-        router.dataForDisplay(array)
+    func readyInformationOnItems(_ array: [InformationItem]) {
+        let items = mapper.prepareItemsForRouting(array)
+        router.dataForDisplay(items)
     }
     
     func occurSuccessfulAction(_ message: String) {
