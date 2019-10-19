@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		799684202C92BDE434C9322E /* Pods_VIPER_CashmachineIB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCEEA56E5B9FED6B61F5960 /* Pods_VIPER_CashmachineIB.framework */; };
 		821EE3E0233FC689002C7C59 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EE3DF233FC689002C7C59 /* AppCoordinator.swift */; };
 		821EE3E3233FC93F002C7C59 /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EE3E2233FC93F002C7C59 /* AppCoordinatorProtocol.swift */; };
 		821EE3E5233FCFB2002C7C59 /* CoordinatorRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EE3E4233FCFB2002C7C59 /* CoordinatorRouting.swift */; };
@@ -130,6 +131,9 @@
 		82EEDA0B22465C7B00C72B16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82EEDA0E22465C7B00C72B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82EEDA1022465C7B00C72B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DF7B5A84D6FDBE35A2AC75 /* Pods-VIPER CashmachineIB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER CashmachineIB.debug.xcconfig"; path = "Target Support Files/Pods-VIPER CashmachineIB/Pods-VIPER CashmachineIB.debug.xcconfig"; sourceTree = "<group>"; };
+		DCCEEA56E5B9FED6B61F5960 /* Pods_VIPER_CashmachineIB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER_CashmachineIB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3218A65879D0323F727414E /* Pods-VIPER CashmachineIB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER CashmachineIB.release.xcconfig"; path = "Target Support Files/Pods-VIPER CashmachineIB/Pods-VIPER CashmachineIB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799684202C92BDE434C9322E /* Pods_VIPER_CashmachineIB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +564,8 @@
 			children = (
 				82D5E66D2269F74700DD9AE6 /* CashMachineApp */,
 				82EEDA0222465C7700C72B16 /* Products */,
+				A010BFAB92641A528D2C4514 /* Pods */,
+				BEC797C096435DB0CFFE8E06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -570,6 +577,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A010BFAB92641A528D2C4514 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91DF7B5A84D6FDBE35A2AC75 /* Pods-VIPER CashmachineIB.debug.xcconfig */,
+				F3218A65879D0323F727414E /* Pods-VIPER CashmachineIB.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BEC797C096435DB0CFFE8E06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCCEEA56E5B9FED6B61F5960 /* Pods_VIPER_CashmachineIB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,9 +602,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82EEDA1322465C7B00C72B16 /* Build configuration list for PBXNativeTarget "VIPER CashmachineIB" */;
 			buildPhases = (
+				C233AA244C9821E4E1F7347F /* [CP] Check Pods Manifest.lock */,
 				82EED9FD22465C7700C72B16 /* Sources */,
 				82EED9FE22465C7700C72B16 /* Frameworks */,
 				82EED9FF22465C7700C72B16 /* Resources */,
+				D87760B79094D6843F4D7AB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -636,6 +663,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C233AA244C9821E4E1F7347F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER CashmachineIB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D87760B79094D6843F4D7AB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER CashmachineIB/Pods-VIPER CashmachineIB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VIPER CashmachineIB/Pods-VIPER CashmachineIB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER CashmachineIB/Pods-VIPER CashmachineIB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82EED9FD22465C7700C72B16 /* Sources */ = {
@@ -840,6 +909,7 @@
 		};
 		82EEDA1422465C7B00C72B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DF7B5A84D6FDBE35A2AC75 /* Pods-VIPER CashmachineIB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -858,6 +928,7 @@
 		};
 		82EEDA1522465C7B00C72B16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3218A65879D0323F727414E /* Pods-VIPER CashmachineIB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
