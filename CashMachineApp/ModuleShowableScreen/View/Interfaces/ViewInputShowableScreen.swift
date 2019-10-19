@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ViewInputShowableScreen: class {
+protocol ViewInputShowableScreen: UIViewController {
     var output: ViewOutputShowableScreen { get set }
     func deleteIndexPath(row: Int)
     func setDataOfItems(_ array: [InformationCellViewModel])

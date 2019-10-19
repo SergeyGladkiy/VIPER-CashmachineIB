@@ -189,14 +189,14 @@
                                             <action selector="pay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEb-m8-Iet"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-Ch-Mz0" customClass="SimpleTextView" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-Ch-Mz0" customClass="SimpleTextView" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                         <rect key="frame" x="30" y="608" width="354" height="375"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="354" id="UlX-Pq-VNN"/>
                                             <constraint firstAttribute="height" constant="375" id="vcm-R2-ii4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">

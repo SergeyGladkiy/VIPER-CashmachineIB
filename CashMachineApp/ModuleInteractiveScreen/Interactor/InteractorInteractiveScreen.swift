@@ -10,7 +10,7 @@ import Foundation
 
 class InteractorInteractiveScreen {
     
-    var output: InteractorOutputInteractiveScreen!
+    weak var output: InteractorOutputInteractiveScreen!
     var countService: CashMachine!
 
 }

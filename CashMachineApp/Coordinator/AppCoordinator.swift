@@ -16,7 +16,7 @@ class AppCoordinator {
 
 extension AppCoordinator: AppCoordinatroProtocol {
     func prepareWindow() -> UIWindow? {
-        rootRouter = CoordinatorRouting()
+        rootRouter = DependenceProvider.resolve()
         window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = rootRouter.start()
         window.makeKeyAndVisible()

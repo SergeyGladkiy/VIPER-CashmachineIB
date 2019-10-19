@@ -14,9 +14,9 @@ class TextView: UITextView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let design = buildDesign()
-        font = design.font
-        textColor = design.textColor
-        textAlignment = design.textAlignment
+        //font = design.font
+        //textColor = design.textColor
+        //textAlignment = design.textAlignment
         isEditable = design.isEditable
         backgroundColor = design.backgroundColor
         layer.cornerRadius = design.bounds.cornerRadius

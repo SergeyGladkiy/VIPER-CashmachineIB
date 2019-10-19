@@ -11,4 +11,5 @@ import Foundation
 protocol ViewOutputShowableScreen: class {
     func deleteButtonPressed(item: Int)
     func backToInteractive()
+    func loadData()
 }

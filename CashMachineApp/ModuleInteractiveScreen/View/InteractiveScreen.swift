@@ -10,7 +10,7 @@ import UIKit
 
 class InteractiveScreen: UIViewController {
     
-    private weak var outputView: ViewOutputInteractiveScreen!
+    private var outputView: ViewOutputInteractiveScreen!
     
     @IBOutlet private weak var name: UITextField!
     @IBOutlet private weak var registeredCode: UITextField!

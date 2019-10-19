@@ -10,7 +10,7 @@ import Foundation
 
 class PresenterShowableScreen {
     private weak var view: ViewInputShowableScreen!
-    private weak var interactor: InteractorInputShowableScreen!
+    private var interactor: InteractorInputShowableScreen!
     private var router: RoutingInput!
     
     init(view: ViewInputShowableScreen, interactor: InteractorInputShowableScreen, router: RoutingInput) {
@@ -21,6 +21,10 @@ class PresenterShowableScreen {
 }
 
 extension PresenterShowableScreen: ViewOutputShowableScreen {
+    func loadData() {
+        interactor.prepareShowableItems()
+    }
+    
     func deleteButtonPressed(item: Int) {
         interactor.remove(at: item)
     }

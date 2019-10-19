@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,11 @@
 		82B4848E23467FD500BEFEE8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4848D23467FD500BEFEE8 /* TextView.swift */; };
 		82B484902348F34900BEFEE8 /* ITextViewDisign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4848F2348F34900BEFEE8 /* ITextViewDisign.swift */; };
 		82B484952348F80200BEFEE8 /* SimpleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B484942348F80200BEFEE8 /* SimpleTextView.swift */; };
+		82D5B271235BB38A0043B844 /* CountServiceAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B270235BB38A0043B844 /* CountServiceAssambly.swift */; };
+		82D5B273235BB4A00043B844 /* AppCoordinatorAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B272235BB4A00043B844 /* AppCoordinatorAssambly.swift */; };
+		82D5B275235BB5300043B844 /* InteractiveScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B274235BB5300043B844 /* InteractiveScreenAssambly.swift */; };
+		82D5B278235BBE220043B844 /* ShowableScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */; };
+		82D5B27A235BC05D0043B844 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B279235BC05D0043B844 /* DependenceProvider.swift */; };
 		82D5E6912269F74700DD9AE6 /* PresenterInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6722269F74700DD9AE6 /* PresenterInteractiveScreen.swift */; };
 		82D5E6932269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6752269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift */; };
 		82D5E6942269F74700DD9AE6 /* ViewInputInteractiveScree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6762269F74700DD9AE6 /* ViewInputInteractiveScree.swift */; };
@@ -88,6 +93,11 @@
 		82B4848D23467FD500BEFEE8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		82B4848F2348F34900BEFEE8 /* ITextViewDisign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITextViewDisign.swift; sourceTree = "<group>"; };
 		82B484942348F80200BEFEE8 /* SimpleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextView.swift; sourceTree = "<group>"; };
+		82D5B270235BB38A0043B844 /* CountServiceAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountServiceAssambly.swift; sourceTree = "<group>"; };
+		82D5B272235BB4A00043B844 /* AppCoordinatorAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssambly.swift; sourceTree = "<group>"; };
+		82D5B274235BB5300043B844 /* InteractiveScreenAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveScreenAssambly.swift; sourceTree = "<group>"; };
+		82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowableScreenAssambly.swift; sourceTree = "<group>"; };
+		82D5B279235BC05D0043B844 /* DependenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
 		82D5E6722269F74700DD9AE6 /* PresenterInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E6752269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOutputInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E6762269F74700DD9AE6 /* ViewInputInteractiveScree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInputInteractiveScree.swift; sourceTree = "<group>"; };
@@ -280,12 +290,57 @@
 			path = SettingDisignTextView;
 			sourceTree = "<group>";
 		};
+		82D5B26B235BB2B20043B844 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				82D5B26D235BB2DD0043B844 /* DependenceProvider */,
+				82D5B26C235BB2C80043B844 /* Assamblies */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		82D5B26C235BB2C80043B844 /* Assamblies */ = {
+			isa = PBXGroup;
+			children = (
+				82D5B26E235BB3130043B844 /* Services */,
+				82D5B26F235BB3260043B844 /* Presentations */,
+			);
+			path = Assamblies;
+			sourceTree = "<group>";
+		};
+		82D5B26D235BB2DD0043B844 /* DependenceProvider */ = {
+			isa = PBXGroup;
+			children = (
+				82D5B279235BC05D0043B844 /* DependenceProvider.swift */,
+			);
+			path = DependenceProvider;
+			sourceTree = "<group>";
+		};
+		82D5B26E235BB3130043B844 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				82D5B270235BB38A0043B844 /* CountServiceAssambly.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		82D5B26F235BB3260043B844 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				82D5B272235BB4A00043B844 /* AppCoordinatorAssambly.swift */,
+				82D5B274235BB5300043B844 /* InteractiveScreenAssambly.swift */,
+				82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
 		82D5E66D2269F74700DD9AE6 /* CashMachineApp */ = {
 			isa = PBXGroup;
 			children = (
 				821EE3FD233FFF6F002C7C59 /* Supporting */,
 				82D976A223432B10009CC897 /* CustomDesign */,
 				821EE3E9233FF0B1002C7C59 /* Services */,
+				82D5B26B235BB2B20043B844 /* DI */,
 				821EE3DE233FAD02002C7C59 /* Coordinator */,
 				82D5E66E2269F74700DD9AE6 /* ModuleInteractiveScreen */,
 				821EE3DC233F9E11002C7C59 /* ModuleShowableScreen */,
@@ -583,7 +638,6 @@
 				91DF7B5A84D6FDBE35A2AC75 /* Pods-VIPER CashmachineIB.debug.xcconfig */,
 				F3218A65879D0323F727414E /* Pods-VIPER CashmachineIB.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -712,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D976DB234660E3009CC897 /* SimpleStackView.swift in Sources */,
+				82D5B273235BB4A00043B844 /* AppCoordinatorAssambly.swift in Sources */,
 				82D5E6962269F74700DD9AE6 /* CashMachine.swift in Sources */,
 				82D976B323432B11009CC897 /* SimpleField.swift in Sources */,
 				82D5E6992269F74700DD9AE6 /* MakeBill.swift in Sources */,
@@ -733,11 +788,13 @@
 				82D976B723432B11009CC897 /* SimpeButton.swift in Sources */,
 				82D976B523432B11009CC897 /* Field.swift in Sources */,
 				82D5E6942269F74700DD9AE6 /* ViewInputInteractiveScree.swift in Sources */,
+				82D5B278235BBE220043B844 /* ShowableScreenAssambly.swift in Sources */,
 				82B484952348F80200BEFEE8 /* SimpleTextView.swift in Sources */,
 				82D976B023432B11009CC897 /* Label.swift in Sources */,
 				82D5E6932269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift in Sources */,
 				82D976A123427DCB009CC897 /* ShowableScreen.swift in Sources */,
 				82D5E69D2269F74700DD9AE6 /* Calculator.swift in Sources */,
+				82D5B271235BB38A0043B844 /* CountServiceAssambly.swift in Sources */,
 				82D5E69F2269F74700DD9AE6 /* CashMachineAssambly.swift in Sources */,
 				82D976D423462074009CC897 /* InformationCellViewModel.swift in Sources */,
 				821EE3E5233FCFB2002C7C59 /* CoordinatorRouting.swift in Sources */,
@@ -757,8 +814,10 @@
 				82D5E6A52269F74700DD9AE6 /* RoutingInput.swift in Sources */,
 				82D976B423432B11009CC897 /* IFieldDisign.swift in Sources */,
 				821EE3F7233FF953002C7C59 /* ViewOutputShowableScreen.swift in Sources */,
+				82D5B27A235BC05D0043B844 /* DependenceProvider.swift in Sources */,
 				82B484902348F34900BEFEE8 /* ITextViewDisign.swift in Sources */,
 				821EE3F5233FF716002C7C59 /* InteractiveScreen.swift in Sources */,
+				82D5B275235BB5300043B844 /* InteractiveScreenAssambly.swift in Sources */,
 				82D5E6A32269F74700DD9AE6 /* InteractorInteractiveScreen.swift in Sources */,
 				82D5E6952269F74700DD9AE6 /* InteractorOutputInteractiveScreen.swift in Sources */,
 				821EE3F2233FF6DA002C7C59 /* ShowableItem.swift in Sources */,

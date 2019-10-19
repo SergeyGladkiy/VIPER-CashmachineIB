@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol InteractorOutputInteractiveScreen {
+protocol InteractorOutputInteractiveScreen: class {
     func readyBill(data: String)
     func occurError(_ errorMessage: String)
     func occurSuccessfulAction(_ message: String)

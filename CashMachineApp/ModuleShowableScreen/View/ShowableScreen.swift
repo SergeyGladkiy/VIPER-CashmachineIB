@@ -16,25 +16,13 @@ class ShowableScreen: UIViewController {
     
     private var purchases = [InformationCellViewModel]()
     
-//    @IBAction func backward(_ sender: UIButton) {
-//        performSegue(withIdentifier: "unwindSegue", sender: nil)
-//    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        view.backgroundColor = .gray
-//        layout()
-//        setUpUI()
-//        tableView.reloadData()
-//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
         layout()
         setUpUI()
-        tableView.reloadData()
+        output.loadData()
     }
-    
 }
 
 extension ShowableScreen {
@@ -59,6 +47,7 @@ extension ShowableScreen {
 extension ShowableScreen: ViewInputShowableScreen {
     func setDataOfItems(_ array: [InformationCellViewModel]) {
         purchases = array
+        tableView.reloadData()
     }
     
    

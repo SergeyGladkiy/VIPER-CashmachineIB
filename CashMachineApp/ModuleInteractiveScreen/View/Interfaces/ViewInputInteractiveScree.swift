@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-protocol ViewInputInteractiveScreen: class {
+protocol ViewInputInteractiveScreen: UIViewController {
     var output: ViewOutputInteractiveScreen {get set}
     func displayBill(data: String)
     func displayError(_ errorMessage: String)

@@ -9,7 +9,7 @@
 import Foundation
 
 class InteractorShowableScreen {
-    var output: InteractorOutputShowableScreen!
+    weak var output: InteractorOutputShowableScreen!
     var entity: EntityShowableScreen!
     
 }
