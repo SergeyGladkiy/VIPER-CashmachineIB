@@ -14,13 +14,18 @@ class TextView: UITextView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let design = buildDesign()
-        font = design.font
-        textColor = design.textColor
-        textAlignment = design.textAlignment
-        isEditable = design.isEditable
+        //font = design.font
+        //textColor = design.textColor
+        //textAlignment = design.textAlignment
+        isScrollEnabled = true
+        showsHorizontalScrollIndicator = true
+        showsVerticalScrollIndicator = true
+        isEditable = true
         backgroundColor = design.backgroundColor
         layer.cornerRadius = design.bounds.cornerRadius
         layer.borderWidth = design.bounds.borderWidth
+        isUserInteractionEnabled = true
+        isScrollEnabled = true
         
     }
     

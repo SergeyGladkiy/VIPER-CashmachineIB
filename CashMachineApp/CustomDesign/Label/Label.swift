@@ -15,6 +15,7 @@ class Label: UILabel {
         let design = buildDisign()
         textColor = design.textColor
         font = design.font
+        
     }
     
     func buildDisign() -> ILabelDisign {

@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingSimpleButton: IButtonDisign {
+    var state: UIControl.State = .normal
     var font: UIFont = UIFont.italicSystemFont(ofSize: 21)
     var backgroundColor: UIColor = #colorLiteral(red: 0, green: 0.3285208941, blue: 0.5748849511, alpha: 1)
     var textColor: UIColor = .white

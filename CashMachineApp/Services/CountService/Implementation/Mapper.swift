@@ -43,10 +43,10 @@ extension Mapper: IMapper {
     
     func information(scannedGoods: [ScannableItem], registeredGoods: [RegisterableItem]) -> [InformationItem] {
         var arrayTableView = [InformationItem]()
-        for i in scannedGoods {
-            for j in registeredGoods {
-                if i.code == j.code {
-                    arrayTableView.append(InformationItem(code: j.code, quantity: i.quantity, name: j.name, value: j.price.value))
+        _ = scannedGoods.map { scanItem in
+            registeredGoods.map {
+                if $0.code == scanItem.code {
+                    arrayTableView.append(InformationItem(code: $0.code, quantity: scanItem.quantity, name: $0.name, value: $0.price.value))
                 }
             }
         }

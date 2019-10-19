@@ -16,32 +16,34 @@ class ShowableScreen: UIViewController {
     
     private var purchases = [InformationCellViewModel]()
     
-//    @IBAction func backward(_ sender: UIButton) {
-//        performSegue(withIdentifier: "unwindSegue", sender: nil)
-//    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        view.backgroundColor = .gray
-//        layout()
-//        setUpUI()
-//        tableView.reloadData()
-//    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        layout()
+        print(#function)
+        view.backgroundColor = .white
         setUpUI()
         tableView.reloadData()
+        
     }
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("init works")
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print(aDecoder)
+        print(self.nibName as Any)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awakeFormNib")
+    }
 }
 
 extension ShowableScreen {
-    private func layout() {
-        tableView.layer.borderWidth = 1
-        tableView.layer.cornerRadius = 5
-    }
     
     private func setUpUI() {
         let nib = UINib(nibName: "ShowableItemTableViewCell", bundle: nil)

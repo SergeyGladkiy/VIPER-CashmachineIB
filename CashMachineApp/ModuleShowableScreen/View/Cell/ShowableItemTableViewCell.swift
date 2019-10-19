@@ -17,4 +17,29 @@ class ShowableItemTableViewCell: UITableViewCell {
             nameLabel.text = viewModel?.information
         }
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.layoutMargins.left = CGFloat(self.indentationLevel) * self.indentationWidth
+        self.contentView.layoutIfNeeded()
+    }
+    
+    override var indentationLevel: Int {
+        get {
+            return 10
+        }
+        set {
+            
+        }
+    }
+    
+    override var indentationWidth: CGFloat {
+        get {
+            return 15
+        }
+        set {
+            
+        }
+    }
+    
 }

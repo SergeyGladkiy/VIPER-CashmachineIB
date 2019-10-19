@@ -13,7 +13,7 @@
         <!--Interactive Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="InteractiveScreen" id="BYZ-38-t0r" customClass="InteractiveScreen" customModule="VIPER_CashmachineIB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InteractiveScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="InteractiveScreen" customModule="VIPER_CashmachineIB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,13 +27,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="d2O-td-jBG" userLabel="Stack View field">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="385"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cowboy" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DXa-W8-vFk" userLabel="Name field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DXa-W8-vFk" userLabel="Name field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="164" height="38"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Some" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-tj-CyE" userLabel="Registered code field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-tj-CyE" userLabel="Registered code field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="58" width="164" height="37.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -51,13 +51,13 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-e9-q0V" userLabel="Tax ">
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-e9-q0V" userLabel="Tax " customClass="SimpleSegmentedControl" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="231.5" width="164" height="39"/>
                                                         <segments>
                                                             <segment title="0.1"/>
                                                             <segment title="100"/>
                                                         </segments>
-                                                        <color key="tintColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </segmentedControl>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Lz-eK-i61" userLabel="Scannable code field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="289.5" width="164" height="37.5"/>
@@ -80,44 +80,47 @@
                                                 <rect key="frame" x="174" y="0.0" width="200" height="385"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pk-Wh-sIk" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="77.5" y="0.0" width="45.5" height="53"/>
+                                                        <rect key="frame" x="77.5" y="0.0" width="45.5" height="51.5"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered code" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v81-ey-8pA" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="29.5" y="56.5" width="141.5" height="53.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v81-ey-8pA" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                        <rect key="frame" x="42.5" y="61.5" width="115" height="52"/>
+                                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="3" height="-1"/>
+                                                        <variation key="heightClass=compact-widthClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        </variation>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-WO-hKA" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="60" y="112" width="80" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-WO-hKA" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                        <rect key="frame" x="60" y="116" width="80" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3s-Yk-aye" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="76" y="167" width="48" height="53.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3s-Yk-aye">
+                                                        <rect key="frame" x="79" y="172.5" width="42.5" height="52"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-Fg-M31">
+                                                        <rect key="frame" x="58.5" y="227" width="83.5" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMg-Fg-M31" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="58.5" y="222.5" width="83.5" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scannable code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-vw-uZb" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                        <rect key="frame" x="30" y="280.5" width="140" height="52"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scannable code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-vw-uZb" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="30" y="277.5" width="140" height="53.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAI-R4-X7s" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                                        <rect key="frame" x="61" y="332" width="78" height="53"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="hAI-R4-X7s" customClass="SimpleLabel" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                                        <rect key="frame" x="61" y="333.5" width="78" height="51.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -129,7 +132,6 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="nAO-8h-gyJ" firstAttribute="leading" secondItem="d2O-td-jBG" secondAttribute="trailing" constant="10" id="IZw-NG-KJC"/>
                                             <constraint firstAttribute="height" constant="385" id="tfF-DK-UaH"/>
                                         </constraints>
                                     </stackView>
@@ -148,12 +150,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHD-x8-Gy2" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                        <rect key="frame" x="269" y="455" width="90" height="36"/>
+                                        <rect key="frame" x="259" y="455" width="100" height="36"/>
                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="SQl-zo-DIa"/>
-                                            <constraint firstAttribute="height" constant="36" id="kmz-IV-hcJ"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                         <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Scan"/>
@@ -162,7 +160,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZZ-ot-DYe" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                        <rect key="frame" x="122" y="552" width="170" height="36"/>
+                                        <rect key="frame" x="122" y="558" width="170" height="36"/>
                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="nNh-7I-ekD"/>
@@ -175,54 +173,63 @@
                                             <action selector="transitionToList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dR4-ZK-E3n"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsp-TQ-6yx" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="502" width="80" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pii-ea-gSd" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                        <rect key="frame" x="172" y="506" width="70" height="36"/>
                                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="36" id="5bP-ua-Dtp"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="mDr-No-htP"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Duy-mb-xzn"/>
+                                            <constraint firstAttribute="height" constant="36" id="Ppd-pU-fv2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Pay"/>
                                         <connections>
-                                            <action selector="pay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEb-m8-Iet"/>
+                                            <action selector="pay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Trs-L5-sm9"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeG-Ch-Mz0" customClass="SimpleTextView" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="608" width="354" height="375"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textView multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="500" placeholderIntrinsicHeight="400" translatesAutoresizingMaskIntoConstraints="NO" id="QhU-TN-shf" customClass="SimpleTextView" customModule="VIPER_CashmachineIB" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="614" width="414" height="310.5"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="354" id="UlX-Pq-VNN"/>
-                                            <constraint firstAttribute="height" constant="375" id="vcm-R2-ii4"/>
+                                            <constraint firstAttribute="height" secondItem="QhU-TN-shf" secondAttribute="width" multiplier="1:4" constant="100" id="QXl-Ra-dzO"/>
+                                            <constraint firstAttribute="width" secondItem="QhU-TN-shf" secondAttribute="height" multiplier="4:3" id="zJP-Fv-5mC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="UlX-Pq-VNN"/>
+                                                <exclude reference="QXl-Ra-dzO"/>
+                                                <exclude reference="zJP-Fv-5mC"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="QXl-Ra-dzO"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="zJP-Fv-5mC"/>
                                             </mask>
                                         </variation>
                                     </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="4LE-Yi-FgG"/>
-                                    <constraint firstItem="LZZ-ot-DYe" firstAttribute="top" secondItem="hsp-TQ-6yx" secondAttribute="bottom" constant="14" id="5Ji-oT-A0Z"/>
                                     <constraint firstItem="qZn-rQ-F9r" firstAttribute="top" secondItem="ptT-4v-NA0" secondAttribute="bottom" constant="50" id="5Zx-hL-OXy"/>
-                                    <constraint firstItem="yHD-x8-Gy2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qZn-rQ-F9r" secondAttribute="trailing" constant="50" id="5he-sh-1vp"/>
                                     <constraint firstItem="LZZ-ot-DYe" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="7o2-e0-1nm"/>
-                                    <constraint firstItem="hsp-TQ-6yx" firstAttribute="top" secondItem="qZn-rQ-F9r" secondAttribute="bottom" constant="11" id="E0c-oK-wDB"/>
-                                    <constraint firstItem="hsp-TQ-6yx" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="HVt-r8-2vU"/>
+                                    <constraint firstItem="yHD-x8-Gy2" firstAttribute="height" secondItem="qZn-rQ-F9r" secondAttribute="height" id="8eQ-ed-RiG"/>
+                                    <constraint firstItem="pii-ea-gSd" firstAttribute="top" secondItem="qZn-rQ-F9r" secondAttribute="bottom" constant="15" id="EFa-D6-KyC"/>
+                                    <constraint firstItem="QhU-TN-shf" firstAttribute="top" secondItem="LZZ-ot-DYe" secondAttribute="bottom" constant="20" id="ETu-xD-Kqf"/>
                                     <constraint firstAttribute="trailing" secondItem="yHD-x8-Gy2" secondAttribute="trailing" constant="55" id="Kev-h4-MCV"/>
+                                    <constraint firstItem="yHD-x8-Gy2" firstAttribute="width" secondItem="qZn-rQ-F9r" secondAttribute="width" id="Mvf-9C-f3w"/>
                                     <constraint firstAttribute="trailing" secondItem="ptT-4v-NA0" secondAttribute="trailing" constant="20" id="Vxg-71-dtC"/>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="top" secondItem="UwA-ge-0FG" secondAttribute="top" constant="20" id="a5l-zq-ZKX"/>
-                                    <constraint firstAttribute="width" constant="414" id="gGc-IQ-cMz"/>
+                                    <constraint firstItem="QhU-TN-shf" firstAttribute="centerX" secondItem="UwA-ge-0FG" secondAttribute="centerX" id="cX2-d9-fok"/>
+                                    <constraint firstItem="yHD-x8-Gy2" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qZn-rQ-F9r" secondAttribute="trailing" constant="200" id="evD-xm-kMB"/>
+                                    <constraint firstItem="LZZ-ot-DYe" firstAttribute="top" secondItem="pii-ea-gSd" secondAttribute="bottom" constant="16" id="h9u-Hy-07F"/>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="leading" secondItem="UwA-ge-0FG" secondAttribute="leading" constant="20" id="htd-jo-jif"/>
-                                    <constraint firstItem="ptT-4v-NA0" firstAttribute="leading" secondItem="cCf-Q1-22U" secondAttribute="trailing" constant="-394" id="iZW-y3-Xuc"/>
-                                    <constraint firstItem="eeG-Ch-Mz0" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="j8t-Wk-ESC"/>
-                                    <constraint firstItem="eeG-Ch-Mz0" firstAttribute="top" secondItem="LZZ-ot-DYe" secondAttribute="bottom" constant="20" id="jdR-oN-wk0"/>
+                                    <constraint firstItem="pii-ea-gSd" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="jto-VQ-hFY"/>
                                     <constraint firstItem="qZn-rQ-F9r" firstAttribute="leading" secondItem="UwA-ge-0FG" secondAttribute="leading" constant="55" id="o22-aO-E5A"/>
-                                    <constraint firstAttribute="bottom" secondItem="eeG-Ch-Mz0" secondAttribute="bottom" constant="40" id="oeA-6g-JXz"/>
                                     <constraint firstItem="yHD-x8-Gy2" firstAttribute="top" secondItem="ptT-4v-NA0" secondAttribute="bottom" constant="50" id="yE6-Ke-e31"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="cCf-Q1-22U"/>
@@ -231,8 +238,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UwA-ge-0FG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3dC-n4-Qbr"/>
-                            <constraint firstAttribute="bottom" secondItem="UwA-ge-0FG" secondAttribute="bottom" constant="20" symbolic="YES" id="KkP-Pq-M3R"/>
+                            <constraint firstItem="UwA-ge-0FG" firstAttribute="bottom" secondItem="QhU-TN-shf" secondAttribute="bottom" constant="10" id="Bve-LW-APV"/>
+                            <constraint firstAttribute="bottom" secondItem="UwA-ge-0FG" secondAttribute="bottom" constant="20" id="KkP-Pq-M3R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="UwA-ge-0FG" secondAttribute="top" id="LsG-2m-loC"/>
+                            <constraint firstItem="QhU-TN-shf" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="egV-0F-XCe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UwA-ge-0FG" secondAttribute="trailing" id="rmn-SP-WUD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -240,12 +249,15 @@
                     <size key="freeformSize" width="414" height="1100"/>
                     <connections>
                         <outlet property="currencyUnit" destination="KYB-zV-Cp0" id="j0u-Zm-HMA"/>
+                        <outlet property="labelTaxMode" destination="UMg-Fg-M31" id="6MP-Eg-njD"/>
+                        <outlet property="labelValue" destination="h3s-Yk-aye" id="tuY-e4-B3l"/>
                         <outlet property="name" destination="DXa-W8-vFk" id="ypE-Nh-1zW"/>
                         <outlet property="quantity" destination="pKO-cb-fXZ" id="XxG-5p-Kms"/>
                         <outlet property="registeredCode" destination="hgB-tj-CyE" id="qb7-Td-ocy"/>
                         <outlet property="scannableCode" destination="3Lz-eK-i61" id="Aei-PW-A8r"/>
+                        <outlet property="scroll" destination="UwA-ge-0FG" id="lfM-c7-ooI"/>
                         <outlet property="taxModeSegment" destination="e8S-e9-q0V" id="f1E-TS-zJz"/>
-                        <outlet property="textView" destination="eeG-Ch-Mz0" id="IuP-Cp-FcR"/>
+                        <outlet property="textView" destination="QhU-TN-shf" id="GmM-8w-F0n"/>
                         <outlet property="value" destination="odg-hc-w5P" id="4Fl-oN-bih"/>
                     </connections>
                 </viewController>
@@ -256,24 +268,21 @@
         <!--Showable Screen-->
         <scene sceneID="Dri-2t-TUL">
             <objects>
-                <viewController storyboardIdentifier="ShowableScreen" id="MMF-KE-Nsg" customClass="ShowableScreen" customModule="VIPER_CashmachineIB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowableScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MMF-KE-Nsg" customClass="ShowableScreen" customModule="VIPER_CashmachineIB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x3b-Se-XLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="frT-oN-GBN">
-                                <rect key="frame" x="20" y="99" width="374" height="763"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="764"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="k2I-TQ-SR7"/>
-                                </constraints>
+                                <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6f-ja-qmL" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
-                                <rect key="frame" x="22" y="44" width="90" height="36"/>
+                                <rect key="frame" x="22" y="44" width="110" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="LM4-5D-fhR"/>
-                                    <constraint firstAttribute="height" constant="36" id="RNt-6f-m1Z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="LM4-5D-fhR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,13 +294,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="frT-oN-GBN" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" constant="20" id="4eP-69-qgQ"/>
                             <constraint firstItem="frT-oN-GBN" firstAttribute="top" secondItem="T6f-ja-qmL" secondAttribute="bottom" constant="19" id="75O-Gn-6WJ"/>
                             <constraint firstItem="T6f-ja-qmL" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" constant="22" id="7Wx-H1-Ky7"/>
-                            <constraint firstItem="fkB-l2-iRr" firstAttribute="trailing" secondItem="frT-oN-GBN" secondAttribute="trailing" constant="20" id="LBg-jP-99a"/>
+                            <constraint firstItem="frT-oN-GBN" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" id="FH5-j2-00Z"/>
                             <constraint firstItem="T6f-ja-qmL" firstAttribute="top" secondItem="fkB-l2-iRr" secondAttribute="top" id="ZnP-SA-V8R"/>
+                            <constraint firstItem="fkB-l2-iRr" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="T6f-ja-qmL" secondAttribute="trailing" constant="150" id="aCg-6r-Sfr"/>
                             <constraint firstItem="fkB-l2-iRr" firstAttribute="bottom" secondItem="frT-oN-GBN" secondAttribute="bottom" id="gi5-ZR-aA3"/>
-                            <constraint firstItem="fkB-l2-iRr" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="T6f-ja-qmL" secondAttribute="trailing" constant="302" id="xsL-zx-Rek"/>
+                            <constraint firstItem="frT-oN-GBN" firstAttribute="centerX" secondItem="fkB-l2-iRr" secondAttribute="centerX" id="jq7-l6-X11"/>
+                            <constraint firstItem="fkB-l2-iRr" firstAttribute="trailing" secondItem="frT-oN-GBN" secondAttribute="trailing" id="oDg-l2-Toi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fkB-l2-iRr"/>
                     </view>

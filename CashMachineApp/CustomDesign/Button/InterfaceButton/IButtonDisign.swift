@@ -11,6 +11,7 @@ import UIKit
 protocol IButtonDisign {
     var bounds: AdjustingBounds { get }
     var font: UIFont { get }
+    var state: UIControl.State { get }
     var backgroundColor: UIColor { get }
     var textColor: UIColor { get }
 }

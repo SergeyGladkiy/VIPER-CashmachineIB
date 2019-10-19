@@ -20,7 +20,13 @@ class InteractiveScreen: UIViewController {
     @IBOutlet private weak var scannableCode: UITextField!
     @IBOutlet private weak var quantity: UITextField!
     
+    @IBOutlet weak var labelValue: UILabel!
+    
+    @IBOutlet weak var labelTaxMode: UILabel!
+    
     @IBOutlet private weak var textView: UITextView!
+    
+    @IBOutlet weak var scroll: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +49,17 @@ class InteractiveScreen: UIViewController {
         quantity.text = nil
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print(aDecoder)
+        print(self.nibName as Any)
+        
+    }
 }
 
 extension InteractiveScreen {
     
     @IBAction private func register(_ sender: UIButton) {
-        
         if name.text! == "" {
             textView.text = "Пустое поле name"
             return
@@ -123,8 +134,8 @@ extension InteractiveScreen {
         outputView.transitionButtonTapped()
     }
     
-    @IBAction private func pay(_ sender: UIButton) {
-        outputView.payButtonTapped()
+    @IBAction func pay(_ sender: UIButton) {
+        output.payButtonTapped()
     }
 }
 
@@ -140,6 +151,7 @@ extension InteractiveScreen: ViewInputInteractiveScreen {
     }
     
     func displayBill(data: String) {
+        print(data)
         textView.text = data
     }
     

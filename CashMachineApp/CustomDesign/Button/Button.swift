@@ -16,8 +16,8 @@ class Button: UIButton {
         layer.cornerRadius = design.bounds.cornerRadius
         layer.borderWidth = design.bounds.borderWidth
         titleLabel?.font = design.font
-        setTitleColor(design.textColor, for: .normal)
-        backgroundColor = design.backgroundColor
+        setTitleColor(design.textColor, for: design.state)
+        //backgroundColor = design.backgroundColor
         guard let margin = design.bounds.margin else {
             fatalError("don't forget about margin")
         }

@@ -11,7 +11,7 @@ import UIKit
 
 class SettingStackView: IStackViewDisign {
     var backgroundColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    var bounds = AdjustingBounds(borderWidth: 2,cornerRadius: 5, margin: nil)
+    var bounds = AdjustingBounds(borderWidth: 1, cornerRadius: 5, margin: nil)
 }
 
 class SimpleStackView: StackView {

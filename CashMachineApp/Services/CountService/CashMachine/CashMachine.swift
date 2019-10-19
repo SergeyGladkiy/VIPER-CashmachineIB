@@ -10,7 +10,6 @@ import Foundation
 
 class CashMachine {
     
-    // попытаться сделать сквойзные параметры
     private var registeredGoods: [RegisterableItem] = []
     private var shoplist: [ScannableItem] = []
     
@@ -31,10 +30,10 @@ class CashMachine {
     
     private func sumShopList() -> Double {
         var sum = 0.0
-        for i in shoplist {
-            for j in registeredGoods {
-                if j.code == i.code {
-                    sum += i.quantity * j.price.value
+        let array = shoplist.map { itemScan in
+            registeredGoods.map {
+                if itemScan.code == $0.code {
+                    sum += $0.price.value * itemScan.quantity
                 }
             }
         }

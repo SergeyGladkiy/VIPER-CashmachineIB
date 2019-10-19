@@ -27,7 +27,7 @@ extension CoordinatorRouting {
         self.interactorShowableScreen = InteractorShowableScreen()
         self.interactorShowableScreen.entity = self.entityShowableScreen
         let view = storyboard.instantiateViewController(withIdentifier: "ShowableScreen") as! ShowableScreen
-        //let view = ShowableScreen()
+        //let view = ShowableScreen(nibName: nil, bundle: nil)
         let presenter = PresenterShowableScreen(view: view,
                                                 interactor: self.interactorShowableScreen,
                                                 router: self)
