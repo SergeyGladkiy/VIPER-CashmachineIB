@@ -26,16 +26,17 @@
 		82B4848E23467FD500BEFEE8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4848D23467FD500BEFEE8 /* TextView.swift */; };
 		82B484902348F34900BEFEE8 /* ITextViewDisign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4848F2348F34900BEFEE8 /* ITextViewDisign.swift */; };
 		82B484952348F80200BEFEE8 /* SimpleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B484942348F80200BEFEE8 /* SimpleTextView.swift */; };
+<<<<<<< HEAD
 		82D5B271235BB38A0043B844 /* CountServiceAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B270235BB38A0043B844 /* CountServiceAssambly.swift */; };
 		82D5B273235BB4A00043B844 /* AppCoordinatorAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B272235BB4A00043B844 /* AppCoordinatorAssambly.swift */; };
 		82D5B275235BB5300043B844 /* InteractiveScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B274235BB5300043B844 /* InteractiveScreenAssambly.swift */; };
 		82D5B278235BBE220043B844 /* ShowableScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */; };
 		82D5B27A235BC05D0043B844 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B279235BC05D0043B844 /* DependenceProvider.swift */; };
-		82D5B28F235BE5960043B844 /* DependenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B287235BE5960043B844 /* DependenceProvider.swift */; };
-		82D5B290235BE5960043B844 /* AppCoordinatorAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B28A235BE5960043B844 /* AppCoordinatorAssambly.swift */; };
-		82D5B291235BE5960043B844 /* ShowableScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B28B235BE5960043B844 /* ShowableScreenAssambly.swift */; };
-		82D5B292235BE5960043B844 /* InteractiveScreenAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B28C235BE5960043B844 /* InteractiveScreenAssambly.swift */; };
-		82D5B293235BE5960043B844 /* CountServiceAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5B28E235BE5960043B844 /* CountServiceAssambly.swift */; };
+=======
+		82B484982349386F00BEFEE8 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B484972349386F00BEFEE8 /* SegmentedControl.swift */; };
+		82B4849B23493AC500BEFEE8 /* ISegmentedDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4849A23493AC500BEFEE8 /* ISegmentedDesign.swift */; };
+		82B4849E23493F7100BEFEE8 /* SimpleSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4849D23493F7100BEFEE8 /* SimpleSegmentedControl.swift */; };
+>>>>>>> usefulRemark
 		82D5E6912269F74700DD9AE6 /* PresenterInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6722269F74700DD9AE6 /* PresenterInteractiveScreen.swift */; };
 		82D5E6932269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6752269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift */; };
 		82D5E6942269F74700DD9AE6 /* ViewInputInteractiveScree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5E6762269F74700DD9AE6 /* ViewInputInteractiveScree.swift */; };
@@ -98,16 +99,17 @@
 		82B4848D23467FD500BEFEE8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		82B4848F2348F34900BEFEE8 /* ITextViewDisign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITextViewDisign.swift; sourceTree = "<group>"; };
 		82B484942348F80200BEFEE8 /* SimpleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		82D5B270235BB38A0043B844 /* CountServiceAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountServiceAssambly.swift; sourceTree = "<group>"; };
 		82D5B272235BB4A00043B844 /* AppCoordinatorAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssambly.swift; sourceTree = "<group>"; };
 		82D5B274235BB5300043B844 /* InteractiveScreenAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveScreenAssambly.swift; sourceTree = "<group>"; };
 		82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowableScreenAssambly.swift; sourceTree = "<group>"; };
 		82D5B279235BC05D0043B844 /* DependenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
-		82D5B287235BE5960043B844 /* DependenceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependenceProvider.swift; sourceTree = "<group>"; };
-		82D5B28A235BE5960043B844 /* AppCoordinatorAssambly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssambly.swift; sourceTree = "<group>"; };
-		82D5B28B235BE5960043B844 /* ShowableScreenAssambly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowableScreenAssambly.swift; sourceTree = "<group>"; };
-		82D5B28C235BE5960043B844 /* InteractiveScreenAssambly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveScreenAssambly.swift; sourceTree = "<group>"; };
-		82D5B28E235BE5960043B844 /* CountServiceAssambly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountServiceAssambly.swift; sourceTree = "<group>"; };
+=======
+		82B484972349386F00BEFEE8 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		82B4849A23493AC500BEFEE8 /* ISegmentedDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISegmentedDesign.swift; sourceTree = "<group>"; };
+		82B4849D23493F7100BEFEE8 /* SimpleSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSegmentedControl.swift; sourceTree = "<group>"; };
+>>>>>>> usefulRemark
 		82D5E6722269F74700DD9AE6 /* PresenterInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E6752269F74700DD9AE6 /* ViewOutputInteractiveScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOutputInteractiveScreen.swift; sourceTree = "<group>"; };
 		82D5E6762269F74700DD9AE6 /* ViewInputInteractiveScree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInputInteractiveScree.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			path = SettingDisignTextView;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		82D5B26B235BB2B20043B844 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,50 +345,32 @@
 				82D5B277235BBE220043B844 /* ShowableScreenAssambly.swift */,
 			);
 			path = Presentations;
-			sourceTree = "<group>";
-		};
-		82D5B285235BE5960043B844 /* DI */ = {
+=======
+		82B484962349384E00BEFEE8 /* SegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				82D5B286235BE5960043B844 /* DependenceProvider */,
-				82D5B288235BE5960043B844 /* Assamblies */,
+				82B484972349386F00BEFEE8 /* SegmentedControl.swift */,
+				82B4849923493AA300BEFEE8 /* InterfaceSegmentedControl */,
+				82B4849C23493F4100BEFEE8 /* SettingDisignSegmented */,
 			);
-			path = DI;
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
-		82D5B286235BE5960043B844 /* DependenceProvider */ = {
+		82B4849923493AA300BEFEE8 /* InterfaceSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				82D5B287235BE5960043B844 /* DependenceProvider.swift */,
+				82B4849A23493AC500BEFEE8 /* ISegmentedDesign.swift */,
 			);
-			path = DependenceProvider;
+			path = InterfaceSegmentedControl;
 			sourceTree = "<group>";
 		};
-		82D5B288235BE5960043B844 /* Assamblies */ = {
+		82B4849C23493F4100BEFEE8 /* SettingDisignSegmented */ = {
 			isa = PBXGroup;
 			children = (
-				82D5B289235BE5960043B844 /* Presentations */,
-				82D5B28D235BE5960043B844 /* Services */,
+				82B4849D23493F7100BEFEE8 /* SimpleSegmentedControl.swift */,
 			);
-			path = Assamblies;
-			sourceTree = "<group>";
-		};
-		82D5B289235BE5960043B844 /* Presentations */ = {
-			isa = PBXGroup;
-			children = (
-				82D5B28A235BE5960043B844 /* AppCoordinatorAssambly.swift */,
-				82D5B28B235BE5960043B844 /* ShowableScreenAssambly.swift */,
-				82D5B28C235BE5960043B844 /* InteractiveScreenAssambly.swift */,
-			);
-			path = Presentations;
-			sourceTree = "<group>";
-		};
-		82D5B28D235BE5960043B844 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				82D5B28E235BE5960043B844 /* CountServiceAssambly.swift */,
-			);
-			path = Services;
+			path = SettingDisignSegmented;
+>>>>>>> usefulRemark
 			sourceTree = "<group>";
 		};
 		82D5E66D2269F74700DD9AE6 /* CashMachineApp */ = {
@@ -393,7 +378,6 @@
 			children = (
 				821EE3FD233FFF6F002C7C59 /* Supporting */,
 				82D976A223432B10009CC897 /* CustomDesign */,
-				82D5B285235BE5960043B844 /* DI */,
 				821EE3E9233FF0B1002C7C59 /* Services */,
 				82D5B26B235BB2B20043B844 /* DI */,
 				821EE3DE233FAD02002C7C59 /* Coordinator */,
@@ -484,6 +468,7 @@
 				82D976AB23432B10009CC897 /* Button */,
 				82D976D523465B99009CC897 /* StackView */,
 				82B484912348F78500BEFEE8 /* TextView */,
+				82B484962349384E00BEFEE8 /* SegmentedControl */,
 			);
 			path = CustomDesign;
 			sourceTree = "<group>";
@@ -835,13 +820,11 @@
 				821EE401233FFFC9002C7C59 /* InteractorOutputShowableScreen.swift in Sources */,
 				82D5E6982269F74700DD9AE6 /* TaxCalculator.swift in Sources */,
 				82D5E6972269F74700DD9AE6 /* IMapper.swift in Sources */,
-				82D5B28F235BE5960043B844 /* DependenceProvider.swift in Sources */,
 				82D976CC2346174A009CC897 /* IMapperInteractiveScreen.swift in Sources */,
 				821EE3E3233FC93F002C7C59 /* AppCoordinatorProtocol.swift in Sources */,
 				82D976B123432B11009CC897 /* SimpleLabel.swift in Sources */,
 				821EE3FC233FFE9C002C7C59 /* InteractorShowableScreen.swift in Sources */,
 				821EE3F3233FF6DA002C7C59 /* ShowableItemTableViewCell.swift in Sources */,
-				82D5B292235BE5960043B844 /* InteractiveScreenAssambly.swift in Sources */,
 				821EE404234012AD002C7C59 /* EntityShowableScreen.swift in Sources */,
 				82D976B723432B11009CC897 /* SimpeButton.swift in Sources */,
 				82D976B523432B11009CC897 /* Field.swift in Sources */,
@@ -860,8 +843,8 @@
 				82D5E6912269F74700DD9AE6 /* PresenterInteractiveScreen.swift in Sources */,
 				82D976C923461706009CC897 /* MapperInteractiveScreen.swift in Sources */,
 				821EE3F9233FF96B002C7C59 /* ViewInputShowableScreen.swift in Sources */,
+				82B4849B23493AC500BEFEE8 /* ISegmentedDesign.swift in Sources */,
 				82D976B923432B11009CC897 /* Structs.swift in Sources */,
-				82D5B293235BE5960043B844 /* CountServiceAssambly.swift in Sources */,
 				82D5E69A2269F74700DD9AE6 /* BIllPrinter.swift in Sources */,
 				82D976C623461274009CC897 /* InformationItem.swift in Sources */,
 				821EE3FF233FFFB4002C7C59 /* InteractorInputShowableSceen.swift in Sources */,
@@ -870,9 +853,9 @@
 				821EE3E8233FEDBE002C7C59 /* PresenterShowableScreen.swift in Sources */,
 				82B4848E23467FD500BEFEE8 /* TextView.swift in Sources */,
 				82D5E6A42269F74700DD9AE6 /* InteractorInputInteractiveScreen.swift in Sources */,
-				82D5B291235BE5960043B844 /* ShowableScreenAssambly.swift in Sources */,
 				82D5E6A52269F74700DD9AE6 /* RoutingInput.swift in Sources */,
 				82D976B423432B11009CC897 /* IFieldDisign.swift in Sources */,
+				82B484982349386F00BEFEE8 /* SegmentedControl.swift in Sources */,
 				821EE3F7233FF953002C7C59 /* ViewOutputShowableScreen.swift in Sources */,
 				82D5B27A235BC05D0043B844 /* DependenceProvider.swift in Sources */,
 				82B484902348F34900BEFEE8 /* ITextViewDisign.swift in Sources */,
@@ -880,8 +863,8 @@
 				82D5B275235BB5300043B844 /* InteractiveScreenAssambly.swift in Sources */,
 				82D5E6A32269F74700DD9AE6 /* InteractorInteractiveScreen.swift in Sources */,
 				82D5E6952269F74700DD9AE6 /* InteractorOutputInteractiveScreen.swift in Sources */,
-				82D5B290235BE5960043B844 /* AppCoordinatorAssambly.swift in Sources */,
 				821EE3F2233FF6DA002C7C59 /* ShowableItem.swift in Sources */,
+				82B4849E23493F7100BEFEE8 /* SimpleSegmentedControl.swift in Sources */,
 				82D976B623432B11009CC897 /* IButtonDisign.swift in Sources */,
 				82D976B223432B11009CC897 /* ILabelDisign.swift in Sources */,
 				82D5E69B2269F74700DD9AE6 /* Scanner.swift in Sources */,
