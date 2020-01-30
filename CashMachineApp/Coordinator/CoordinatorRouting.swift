@@ -41,8 +41,8 @@ extension CoordinatorRouting: RoutingInput {
         self.entityShowableScreen.arrayItems = array
         self.countService = DependenceProvider.resolve()
         self.showableScreen = DependenceProvider.resolve()
-        self.entityShowableScreen.onDeleted = { index in
-            self.countService.removeScannedItem(index: index)
+        self.entityShowableScreen.onDeleted = {
+            self.countService.removeScannedItem(index: $0)
         }
         self.interactiveScreen.present(self.showableScreen, animated: true, completion: nil)
     }

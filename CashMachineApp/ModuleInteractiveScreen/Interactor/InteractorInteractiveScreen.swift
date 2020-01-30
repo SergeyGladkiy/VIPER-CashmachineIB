@@ -12,7 +12,6 @@ class InteractorInteractiveScreen {
     
     weak var output: InteractorOutputInteractiveScreen!
     var countService: CashMachine!
-
 }
 
 extension InteractorInteractiveScreen: InteractorInputInteractiveScreen {
@@ -52,7 +51,6 @@ extension InteractorInteractiveScreen: InteractorInputInteractiveScreen {
 
 extension InteractorInteractiveScreen: MakeBill {
     func printCheck(_ data: String) {
-        print("arrived")
-        output.readyBill(data: data)
+        output.readyData(data)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol InteractorOutputInteractiveScreen: class {
-    func readyBill(data: String)
+    var readyData: (String)-> Void { get set }
     func occurError(_ errorMessage: String)
     func occurSuccessfulAction(_ message: String)
     func readyInformationOnItems(_ array: [InformationItem])

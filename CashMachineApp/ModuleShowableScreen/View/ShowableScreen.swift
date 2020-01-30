@@ -16,26 +16,44 @@ class ShowableScreen: UIViewController {
     
     private var purchases = [InformationCellViewModel]()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("init works")
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print(aDecoder)
+        print(self.nibName as Any)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("awakeFormNib")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print(#function)
+    }
+    
     override func viewDidLoad() {
+        print(#function)
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        layout()
+        view.backgroundColor = .white
         setUpUI()
         output.loadData()
     }
 }
 
 extension ShowableScreen {
-    private func layout() {
-        tableView.layer.borderWidth = 1
-        tableView.layer.cornerRadius = 5
-    }
     
     private func setUpUI() {
         let nib = UINib(nibName: "ShowableItemTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ShowableItemTableViewCell")
-        tableView.dataSource = self
-        tableView.delegate = self
+        //tableView.dataSource = self
+        //tableView.delegate = self
     }
 }
 extension ShowableScreen {

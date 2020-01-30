@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol InteractorInputInteractiveScreen {
+protocol InteractorInputInteractiveScreen: class {
     func registerItem(name: String, code: String, priceCurrency: String, priceValue: Double, tax: TaxMode)
     func scanItem(code: String, quantity: Double) 
     func pay()

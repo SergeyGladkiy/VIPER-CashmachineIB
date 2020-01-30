@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol RoutingInput {
+protocol RoutingInput: class {
     func start() -> UIViewController
     func dataForDisplay(_ array: [InformationCellViewModel])
     func back()

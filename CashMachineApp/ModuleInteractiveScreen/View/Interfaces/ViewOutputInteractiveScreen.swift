@@ -9,8 +9,8 @@
 import Foundation
 
 protocol ViewOutputInteractiveScreen: class {
-    func registerButtonTapped(name: String, code: String, priceCurrency: String, priceValue: Double, tax: TaxMode)  
-    func scanButtonTapped(code: String, quantity: Double) throws
+    
+    func scanButtonTapped(code: String, quantity: Double)
     func payButtonTapped()
     func transitionButtonTapped()
 }

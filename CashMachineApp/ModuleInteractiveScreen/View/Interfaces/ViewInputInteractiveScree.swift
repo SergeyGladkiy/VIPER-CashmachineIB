@@ -11,6 +11,7 @@ import UIKit
 
 protocol ViewInputInteractiveScreen: UIViewController {
     var output: ViewOutputInteractiveScreen {get set}
+    var maintainedRegister: (String, String, String, Double, TaxMode)-> Void {get set}
     func displayBill(data: String)
     func displayError(_ errorMessage: String)
     func displaySuccessfulAction(_ message: String)

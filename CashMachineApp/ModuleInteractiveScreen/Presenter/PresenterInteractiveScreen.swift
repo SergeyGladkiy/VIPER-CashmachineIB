@@ -10,24 +10,31 @@ import Foundation
 
 class PresenterInteractiveScreen {
     
-    private weak var viewInput: ViewInputInteractiveScreen!
+    private unowned let viewInput: ViewInputInteractiveScreen
     private var interactor: InteractorInputInteractiveScreen
-    private var router: RoutingInput
+    private unowned let router: RoutingInput
     private var mapper: IMapperInteractiveScreen
+    
+    private var maintainedPr: ((String)-> Void)!
     
     init(interactor: InteractorInputInteractiveScreen, router: RoutingInput, viewInput: ViewInputInteractiveScreen, mapper: IMapperInteractiveScreen) {
         self.interactor = interactor
         self.router = router
         self.viewInput = viewInput
         self.mapper = mapper
+        allMaintainedAction()
     }
 }
 
 extension PresenterInteractiveScreen: ViewOutputInteractiveScreen {
-    
-    
-    func registerButtonTapped(name: String, code: String, priceCurrency: String, priceValue: Double, tax: TaxMode) {
-        interactor.registerItem(name: name, code: code, priceCurrency: priceCurrency, priceValue: priceValue, tax: tax)
+        
+    func allMaintainedAction() {
+        self.viewInput.maintainedRegister = { 
+            self.interactor.registerItem(name: $0, code: $1, priceCurrency: $2, priceValue: $3, tax: $4)
+        }
+        self.readyData = { [unowned self] in
+            self.viewInput.displayBill(data: $0)
+        }
     }
     
     func scanButtonTapped(code: String, quantity: Double) {
@@ -45,10 +52,15 @@ extension PresenterInteractiveScreen: ViewOutputInteractiveScreen {
 
 extension PresenterInteractiveScreen: InteractorOutputInteractiveScreen {
     
-    func readyBill(data: String) {
-        viewInput.displayBill(data: data)
+    var readyData: (String) -> Void {
+        get {
+            return maintainedPr
+        }
+        set {
+            maintainedPr = newValue
+        }
     }
-    
+
     func occurError(_ errorMessage: String) {
         viewInput.displayError(errorMessage)
     }

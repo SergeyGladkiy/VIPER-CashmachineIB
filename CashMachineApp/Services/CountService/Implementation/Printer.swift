@@ -32,7 +32,7 @@ extension Printer: BillPrinter {
         for i in array {
             bill += ("\(i.code) \(i.name) \(i.quantity)x\(i.priceValue)\n\t\t\t\t\t\t\t\t=\(i.fullPrice)\n")
         }
-        //как РАБОТАЕТ \t
+        
         bill += "\nСУММАРНЫЙ НАЛОГ:\t\t\t    =\(totalTax)\n"
         bill += "\nПРОМЕЖУТОЧНЫЙ ИТОГ:\t\t\t    =\(sum)\n\n"
         bill += "CashMachine №1:\n\(cachierInf)\n"

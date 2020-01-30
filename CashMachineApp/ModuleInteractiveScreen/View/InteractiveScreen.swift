@@ -12,6 +12,8 @@ class InteractiveScreen: UIViewController {
     
     private var outputView: ViewOutputInteractiveScreen!
     
+    private var registerButtonTapped: ((String, String, String, Double, TaxMode)-> Void)!
+    
     @IBOutlet private weak var name: UITextField!
     @IBOutlet private weak var registeredCode: UITextField!
     @IBOutlet private weak var currencyUnit: UITextField!
@@ -22,9 +24,23 @@ class InteractiveScreen: UIViewController {
     
     @IBOutlet private weak var textView: UITextView!
     
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print(aDecoder)
+        print(self.nibName as Any)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print(#function)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,7 +58,6 @@ class InteractiveScreen: UIViewController {
         scannableCode.text = nil
         quantity.text = nil
     }
-    
 }
 
 extension InteractiveScreen {
@@ -82,10 +97,10 @@ extension InteractiveScreen {
         
         switch taxModeSegment.selectedSegmentIndex {
         case 0:
-            outputView.registerButtonTapped(name: name, code: code, priceCurrency: currency, priceValue: value, tax: .NDS)
+            registerButtonTapped(name, code, currency, value, .NDS)
             clearRegistableText()
         case 1:
-            outputView.registerButtonTapped(name: name, code: code, priceCurrency: currency, priceValue: value, tax: .Excise)
+            registerButtonTapped(name, code, currency, value, .Excise)
             clearRegistableText()
         default:
             textView.text = "Выберите режим налогообложения (0.1 для НДС или 100 для акциза)"
@@ -107,16 +122,8 @@ extension InteractiveScreen {
             textView.text = "В поле quantity введите число"
             return
         }
-        
-        do {
-            textView.text = ""
-            try outputView.scanButtonTapped(code: code, quantity: quantity)
-            cleanScanText()
-        } catch let error as CashmashineErrors {
-            displayError(error.localizedDescription)
-        } catch {
-            displayError("Error")
-        }
+        outputView.scanButtonTapped(code: code, quantity: quantity)
+        cleanScanText()
     }
     
     @IBAction func transitionToList(_ sender: UIButton) {
@@ -129,6 +136,15 @@ extension InteractiveScreen {
 }
 
 extension InteractiveScreen: ViewInputInteractiveScreen {
+    var maintainedRegister: (String, String, String, Double, TaxMode) -> Void {
+        get {
+            return registerButtonTapped
+        }
+        set {
+            registerButtonTapped = newValue
+        }
+    }
+    
     
     var output: ViewOutputInteractiveScreen {
         get {
@@ -148,7 +164,7 @@ extension InteractiveScreen: ViewInputInteractiveScreen {
     }
     
     func displayError(_ errorMessage: String) {
-        
+        textView.text = ""
         let alert = UIAlertController(title: "Wrong format", message: errorMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAction)

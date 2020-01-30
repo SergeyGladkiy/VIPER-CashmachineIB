@@ -10,7 +10,6 @@ import Foundation
 
 class CashMachine {
     
-    // попытаться сделать сквойзные параметры
     private var registeredGoods: [RegisterableItem] = []
     private var shoplist: [ScannableItem] = []
     

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,25 +27,21 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cowboy" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DXa-W8-vFk" userLabel="Name field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="164" height="38"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Some" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hgB-tj-CyE" userLabel="Registered code field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="58" width="164" height="37.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KYB-zV-Cp0" userLabel="Currency field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="115.5" width="164" height="38"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="odg-hc-w5P" userLabel="Value field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="173.5" width="164" height="38"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -61,13 +55,11 @@
                                                     </segmentedControl>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Lz-eK-i61" userLabel="Scannable code field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="289.5" width="164" height="37.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pKO-cb-fXZ" userLabel="Quantity field" customClass="SimpleField" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="347" width="164" height="38"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -216,7 +208,6 @@
                                     <constraint firstAttribute="trailing" secondItem="yHD-x8-Gy2" secondAttribute="trailing" constant="55" id="Kev-h4-MCV"/>
                                     <constraint firstAttribute="trailing" secondItem="ptT-4v-NA0" secondAttribute="trailing" constant="20" id="Vxg-71-dtC"/>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="top" secondItem="UwA-ge-0FG" secondAttribute="top" constant="20" id="a5l-zq-ZKX"/>
-                                    <constraint firstAttribute="width" constant="414" id="gGc-IQ-cMz"/>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="leading" secondItem="UwA-ge-0FG" secondAttribute="leading" constant="20" id="htd-jo-jif"/>
                                     <constraint firstItem="ptT-4v-NA0" firstAttribute="leading" secondItem="cCf-Q1-22U" secondAttribute="trailing" constant="-394" id="iZW-y3-Xuc"/>
                                     <constraint firstItem="eeG-Ch-Mz0" firstAttribute="centerX" secondItem="cCf-Q1-22U" secondAttribute="centerX" id="j8t-Wk-ESC"/>
@@ -262,11 +253,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="frT-oN-GBN">
-                                <rect key="frame" x="20" y="99" width="374" height="763"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="450" id="k2I-TQ-SR7"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="MMF-KE-Nsg" id="yJ3-5M-IB6"/>
+                                    <outlet property="delegate" destination="MMF-KE-Nsg" id="4VL-ec-0Hw"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6f-ja-qmL" customClass="SimpleButton" customModule="VIPER_CashmachineIB" customModuleProvider="target">
                                 <rect key="frame" x="22" y="44" width="90" height="36"/>
@@ -285,10 +277,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="frT-oN-GBN" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" constant="20" id="4eP-69-qgQ"/>
+                            <constraint firstItem="frT-oN-GBN" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" id="4eP-69-qgQ"/>
                             <constraint firstItem="frT-oN-GBN" firstAttribute="top" secondItem="T6f-ja-qmL" secondAttribute="bottom" constant="19" id="75O-Gn-6WJ"/>
                             <constraint firstItem="T6f-ja-qmL" firstAttribute="leading" secondItem="fkB-l2-iRr" secondAttribute="leading" constant="22" id="7Wx-H1-Ky7"/>
-                            <constraint firstItem="fkB-l2-iRr" firstAttribute="trailing" secondItem="frT-oN-GBN" secondAttribute="trailing" constant="20" id="LBg-jP-99a"/>
+                            <constraint firstItem="fkB-l2-iRr" firstAttribute="trailing" secondItem="frT-oN-GBN" secondAttribute="trailing" id="LBg-jP-99a"/>
                             <constraint firstItem="T6f-ja-qmL" firstAttribute="top" secondItem="fkB-l2-iRr" secondAttribute="top" id="ZnP-SA-V8R"/>
                             <constraint firstItem="fkB-l2-iRr" firstAttribute="bottom" secondItem="frT-oN-GBN" secondAttribute="bottom" id="gi5-ZR-aA3"/>
                             <constraint firstItem="fkB-l2-iRr" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="T6f-ja-qmL" secondAttribute="trailing" constant="302" id="xsL-zx-Rek"/>

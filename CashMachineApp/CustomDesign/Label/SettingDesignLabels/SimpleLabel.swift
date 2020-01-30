@@ -8,13 +8,18 @@
 
 import UIKit
 
-class SettingSimpleLabel: ILabelDisign {
-    var font: UIFont = UIFont.init(name: "Arial", size: 23) ?? .systemFont(ofSize: 23)
-    var textColor: UIColor = .black
+class SettingLabel: ILabelDisign {
+    let font: UIFont
+    let textColor: UIColor
+    
+    init(font: UIFont, textColor: UIColor) {
+        self.font = font
+        self.textColor = textColor
+    }
 }
 
 class SimpleLabel: Label {
     override func buildDisign() -> ILabelDisign {
-        return SettingSimpleLabel()
+        return SettingLabel(font: UIFont.init(name: "Arial", size: 23) ?? .systemFont(ofSize: 23), textColor: .black)
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 class PresenterShowableScreen {
-    private weak var view: ViewInputShowableScreen!
-    private var interactor: InteractorInputShowableScreen!
-    private var router: RoutingInput!
+    private unowned let view: ViewInputShowableScreen
+    private var interactor: InteractorInputShowableScreen
+    private unowned let router: RoutingInput
     
     init(view: ViewInputShowableScreen, interactor: InteractorInputShowableScreen, router: RoutingInput) {
         self.view = view
@@ -32,7 +32,6 @@ extension PresenterShowableScreen: ViewOutputShowableScreen {
     func backToInteractive() {
         router.back()
     }
-    
 }
 
 extension PresenterShowableScreen: InteractorOutputShowableScreen {

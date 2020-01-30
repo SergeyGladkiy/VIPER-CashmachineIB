@@ -1,0 +1,6 @@
+framework module Pods_VIPER_CashmachineIB {
+  umbrella header "Pods-VIPER CashmachineIB-umbrella.h"
+
+  export *
+  module * { export * }
+}
